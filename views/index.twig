@@ -1,0 +1,24 @@
+{% include "components/header-home.twig" %}
+
+  <div class="index-macro">
+
+    <div class="logo">
+      <img src="images/tpg-logo-light.svg" alt="FPO altered logo">
+    </div>
+
+    <nav>
+      {% for section in sections %}
+      <section>
+      {% for page in section %}
+      <a {% if loop.parent.loop.index == sections|length %}class="flat"{% endif %} href="{{ page.url }}">{{ page.label | capitalize }}</a>
+      {% endfor %}
+      </section>
+      {% endfor %}
+    </nav>
+
+  </div>
+
+  <script data-main="js/app" src="js/require.js"></script>
+
+  </body>
+</html>

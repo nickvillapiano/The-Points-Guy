@@ -1,0 +1,72 @@
+<!-- Nav -->
+
+{% include 'components/ad.twig' %}
+
+<div class="hamburger-bg">
+</div>
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+
+    {% include 'components/disclosure.twig' %}
+
+    <div class="header-wrapper">
+        <div class="main-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="deals">Deals</a>
+                    </li>
+                    <li>
+                        <a href="reviews">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="guides">Guides</a>
+                    </li>
+                    <li>
+                        <a href="news">News</a>
+                    </li>
+                    <li>
+                        <a href="tpgtv">Video</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        {% include 'components/login.twig' %}
+
+        <span class="logo">
+            <a href="home"><img src="images/tpg.png" alt="TPG - logo"></a>
+        </span>
+
+        <div class="sub-nav">
+            <ul>
+                <li class="start-here">
+                    The<br>
+                    Beginners Guide
+                </li>
+                <li>
+                    Get<br>
+                    Elite Status
+                </li>
+                <li>
+                    Spend<br>
+                    Rewards
+                </li>
+                <li>
+                    Our<br>
+                    Favorite Cards
+                </li>
+            </ul>
+        </div>
+
+        {% include "components/search.twig" %}
+
+    </div>
+</header>
+
+

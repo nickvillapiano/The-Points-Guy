@@ -1,0 +1,16 @@
+// _ad.scss
+
+// Built an Ad concept. TPG had us kill it.
+
+.ad {
+    width: 100vw;
+    background: url(../images/header-ad.jpg) center center no-repeat $black;
+    background-size: contain;
+    height: 12.7rem;
+    border: 1rem solid $black;
+    //
+    display: none;
+
+    img {
+    }
+}

@@ -1,0 +1,190 @@
+// _toc.scss
+// sk: stepping in for nv - 20161103
+
+.toc-module {
+    // width: 34rem;
+    // background: $white;
+    background: $grey9;
+    margin: 0.9rem 0 2rem 0;
+    position: relative;
+    border: 0.1rem solid $border-grey;
+    border: none;
+    // width: 32rem;
+    // width: 100;
+    padding-bottom: 4rem;
+    //
+    margin: 2.7rem 0 3rem 0;
+
+    &.right {
+        margin-left: 4rem;
+    }
+
+    &.left {
+        margin-right: 2rem;
+    }
+
+    .toc-module-content {
+        width: calc(100% - 5rem);
+        margin: 0 auto;
+    }
+
+    .title {
+        // background: $white;
+        // position: absolute;
+        // writing-mode: vertical-lr;
+        // width: 1rem;
+        // max-width: initial;
+        // transform: rotate(180deg);
+        // bottom: 0;
+        // transform-origin: 0 50%;
+        // height: 100%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: $navy;
+            z-index: 1;
+            height: 0.1rem;
+            width: 100%;
+            top: 3.4rem;
+            // left: 1.1rem;
+            left: 0
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            background: $navy;
+            z-index: 1;
+            height: 0.1rem;
+            width: 100%;
+            top: 3.7rem;
+            // left: 0.8rem;
+            left: 0;
+
+        }
+
+        span {
+            // @include walsh-bold;
+            // font-size: 1.8rem;
+            // background: #fff;
+            // padding: 0 0.8rem 0 1rem;
+            // display: inline-block;
+            // z-index: 2;
+            // vertical-align: top;
+            // // sideways
+            // position: absolute;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // left: 0;
+            // padding: 1rem 0;
+            @include pressura-bold;
+            font-size: 1.6rem;
+            background: $grey9;
+            color: $navy;
+            z-index: 2;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            padding: 3rem 1.5rem;
+        }
+    }
+
+    .controls {
+        display: none;
+    }
+
+    .chapters {
+        margin: 0;
+        padding: 0;
+        counter-reset: chapter-counter;
+        columns: 2;
+
+        li {
+            list-style: none;
+            position: relative;
+            // border-bottom: 0.1rem solid $border-grey;
+            // margin: 3rem 0;
+            padding: 0 1.5rem;
+            margin: 0.7rem;
+            height: 3.8rem;
+            // NOTE: Required when using css-columns; prevents element splitting
+            display: inline-flex;
+            align-items: center;
+            //
+            display: inline-block;
+            vertical-align: baseline;
+            height: auto;
+
+            &:last-of-type {
+                border: none;
+                // padding: 0;
+            }
+
+            a, a:hover, a:active, a:visited, a:link {
+                position: relative;
+                z-index: 2;
+                font-size: 1.8rem;
+                line-height: 1;
+                color: $black;
+                @include walsh-bold;
+                // color: $navy;
+                display: block;
+                margin: 0 0 0 5.6rem;
+                text-decoration: none;
+                //
+                margin: 0 0 0 2rem;
+
+                &:hover {
+                    color: $royal;
+                }
+            }
+
+            &:before {
+                // circulo
+                content: "";
+                border-radius: 50%;
+                background: $lightest-grey;
+                width: 3.8rem;
+                height: 3.8rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                // NV: two column mods 11082016
+                width: 0.5rem;
+                height: 0.5rem;
+                background: $navy;
+                top: 0.6rem;
+                transform: none;
+            }
+
+            &:after {
+                content: counter(chapter-counter);
+                counter-increment: chapter-counter;
+                @include walsh-bold;
+                display: inline;
+                color: $navy;
+                line-height: 1;
+                position: absolute;
+                top: 50%;
+                width: 3.8rem;
+                text-align: center;
+                transform: translateY(-50%);
+                // NV: two column mods 11082016
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+
+    .toc-module {
+
+        .chapters {
+            column-count: 1;
+        }
+    }
+}

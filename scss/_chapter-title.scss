@@ -1,0 +1,42 @@
+// _chapter-title.scss
+
+.chapter-title {
+    @include walsh-bold;
+    font-size: 3.6rem;
+    line-height: 0.8;
+    text-transform: none;
+    width: calc(100% - 2 * 2rem);
+    clear: initial;
+    max-width: calc(5 * 9rem - 2rem);
+    //
+    position: relative;
+    text-align: center;
+    margin: 0 auto 5rem;
+    padding: 13.2rem 0 0;
+    //
+    margin: 0 auto 3.1rem;
+    padding: 5.3rem 0 0;
+
+    .number {
+        @include pressura-bold;
+        font-size: 4.8rem;
+        position: absolute;
+        top: 5.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background: $green;
+        background: $border-grey;
+        width: 11.5rem;
+        height: 11.5rem;
+        border-radius: 50%;
+        padding: 4.2rem 0 0 0;
+        color: $navy;
+    }
+
+    .copy {
+        position: relative;
+        z-index: 2;
+        line-height: 1.2;
+    }
+}

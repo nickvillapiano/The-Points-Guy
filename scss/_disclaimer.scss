@@ -1,0 +1,26 @@
+// _disclaimer.scss
+
+.disclaimer {
+    @include walsh-medium;
+    font-size: 1.6rem;
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto 2.5rem;
+    padding: 0 $gut;
+    text-align: center;
+
+    .macro {
+        max-width: 11 * $colgut - $gut;
+        background: $f2;
+        padding: 3rem 9vw;
+
+        strong {
+            text-transform: uppercase;
+            color: $navy;
+        }
+
+        a, a:hover, a:visited, a:link, a:visited {
+
+        }
+    }
+}

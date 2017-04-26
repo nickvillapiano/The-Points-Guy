@@ -1,0 +1,149 @@
+<!-- Cards Feed -->
+
+<section class="cards-feed">
+    <div class="related-header">
+        <span>
+            All Cards
+        </span>
+    </div>
+    <div class="cards-feed-wrapper">
+
+        <div class="cards-filter">
+            <div class="cards-filter-wrapper">
+                <input type="text" name="card-search" placeholder="Filter cards"/>
+            </div>
+        </div>
+
+        {# NOTE: Add 'searching' to the following div to activate search view #}
+        <div class="cards-feed-container">
+
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/01.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Chase Sapphire Preferred Card',
+                cardOffer: '50,000 points',
+                isBadge1: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/02.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'American Express Platinum',
+                cardOffer: '60,000 points'
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/03.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Princess Cruises Rewards Visa Card',
+                cardOffer: '40,000 points',
+                isBadge2: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/04.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: '<em>Citi</em>® / AAdvantage® Platinum Select® MasterCard®',
+                cardOffer: '60,000 points',
+                isBadge3: true,
+                search: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/05.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Sony® Card from Capital One®',
+                cardOffer: '50,000 points',
+                isBadge1: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/06.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'American Express Premier Rewards Gold Card',
+                cardOffer: '60,000 points',
+                isBadge3: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/07.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Amtrak Guest Rewards World MasterCard',
+                cardOffer: '40,000 points',
+                isBadge1: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/08.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Barclaycard Arrival Plus Traval Rewards Card',
+                cardOffer: '60,000 points'
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/09.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: '<em>Citi</em> AAdvantage Platinum Select Card',
+                cardOffer: '50,000 points',
+                isBadge3: true,
+                search: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/10.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: '<em>Citi</em> AAdvantage World Elite Card',
+                cardOffer: '60,000 points',
+                isBadge2: true,
+                search: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/11.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Discover it Card',
+                cardOffer: '40,000 points'
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/12.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Fidelity Rewards Visa Signature Card',
+                cardOffer: '60,000 points',
+                isBadge1: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/13.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Gold Delta Skymiles Card',
+                cardOffer: '50,000 points'
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/14.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'JetBlue Credit Card',
+                cardOffer: '60,000 points',
+                isBadge1: true
+            }
+        %}
+        {% include 'components/card-feed-line-item.twig' with
+            {
+                cardUrl: '<img src="images/cards/15.png" alt="Chase Sapphire Card FPO">',
+                cardTitle: 'Lanpass Visa Credit Card',
+                cardOffer: '40,000 points',
+                isBadge3: true
+            }
+        %}
+        </div>
+    </div>
+
+
+    {% include 'components/load-more.twig' with
+        {
+            isCards: true
+        }
+    %}
+
+</section>

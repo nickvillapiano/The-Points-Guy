@@ -1,0 +1,29 @@
+{% include "components/header-home.twig" %}
+
+<div class="above-footer white">
+    {% include "components/home-ctas.twig" %}
+
+    {% include "components/home-nav.twig" %}
+
+    {% include "components/article-header.twig" %}
+
+    <div class="content">
+
+        {% include "components/article-content.twig" %}
+
+    </div>
+
+    {% include "components/related-links.twig" %}
+
+    {% include "components/tags.twig" %}
+
+    {% include 'components/advertiser-disclosure-body.twig' %}
+
+    {% include 'components/notification-bar.twig' with
+        {
+            isSignUp: true
+        }
+    %}
+</div>
+
+{% include "components/footer.twig" %}

@@ -1,0 +1,32 @@
+// _horizontal-articles-viral.scss
+
+&.viral {
+
+    .link {
+        width: calc(100% - 29rem);
+    }
+
+    .share-count {
+        text-align: right;
+        @include inline-vertical;
+        width: 10rem;
+        color: $royal;
+        text-decoration: underline;
+        transition: color 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    &.viral {
+
+        .link {
+            width: calc(100% - 9rem);
+        }
+    }
+}

@@ -1,0 +1,162 @@
+// _add-a-card.scss
+
+.add-a-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $grey9;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+
+    .section-header {
+        text-align: left;
+        left: 0;
+        transform: none;
+    }
+
+    .add-a-card-wrapper {
+        background: $white;
+        @include absolute-center;
+        padding: 6.5rem;
+        max-width: calc(100% - 4rem);
+    }
+
+    .x-close {
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+
+        svg {
+            width: 2rem;
+
+            .cls-1 {
+                fill: $navy;
+                transition: all 0.3s;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+
+                .cls-1 {
+                    fill: $green;
+                }
+            }
+        }
+    }
+
+    .add-a-card-content {
+    }
+
+    .input-macro {
+        margin: 0 0 2.5rem;
+    }
+
+    .input-label {
+        @include walsh-bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin: 0 0 0.6rem;
+    }
+
+    .standard-input {
+        width: 100%;
+    }
+
+    .input-results {
+        max-width: 30rem;
+        min-width: 23rem;
+        background: $grey9;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: all 0.3s;
+
+        .line-item {
+            padding: 0.7rem 1.5rem;
+            transition: all 0.2s;
+
+            em {
+                @include walsh-bold;
+                color: $royal;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: $green;
+            }
+        }
+
+        &.show {
+            max-height: 10rem;
+            padding: 1rem 0;
+        }
+    }
+
+    .selected-result {
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.3s;
+
+        .card-wrapper {
+            position: relative;
+            background: $grey9;
+            width: 16rem;
+            height: 9rem;
+            margin: 2.5rem auto 1rem;
+
+            img {
+                @include absolute-center;
+                display: block;
+                width: 8.6rem;
+                z-index: 2;
+            }
+
+            &:before {
+                content: "";
+                width: 7.5rem;
+                height: 7.5rem;
+                background: $lightest-grey;
+                border-radius: 50%;
+                @include absolute-center;
+                z-index: 1;
+            }
+        }
+
+        .card-title {
+            @include walsh-bold;
+            font-size: 1.8rem;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+            max-width: calc(100% - 4rem);
+        }
+
+        &.show {
+            max-height: 18rem;
+        }
+    }
+
+    .cancel {
+        text-align: center;
+        color: $royal;
+        text-decoration: underline;
+        font-size: 1.4rem;
+        margin: 1.5rem 0 0;
+
+        &:hover {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+
+    &.show {
+        opacity: 1;
+        z-index: 999;
+    }
+}

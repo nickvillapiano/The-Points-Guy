@@ -1,0 +1,51 @@
+<!-- Cards Grid - Tag -->
+
+<section class="cards-grid-tag">
+    <div class="cards-grid-tag-wrapper">
+        <div class="section-header">
+            Our Favorite Cards
+        </div>
+        <div class="cards-grid">
+            {% include 'components/individual-card-tag.twig' with
+                {
+                    cardDom: '<img src="images/cards/01.png" alt="Chase Sapphire Card FPO">',
+                    cardTitle: 'Chase Sapphire Preferred',
+                    offerAmount: '50,000 points',
+                    hasBadges: false
+                }
+            %}
+            {% include 'components/individual-card-tag.twig' with
+                {
+                    cardDom: '<img src="images/cards/02.png" alt="American Express Platinum Card FPO">',
+                    cardTitle: 'American Express Platinum',
+                    offerAmount: '60,000 points',
+                    hasBadges: false
+                }
+            %}
+            {% include 'components/individual-card-tag.twig' with
+                {
+                    cardDom: '<img src="images/cards/03.png" alt="Princess Cruises Rewards Visa Card FPO">',
+                    cardTitle: 'Princess Cruises Rewards Visa Card',
+                    offerAmount: '40,000 points',
+                    hasBadges: false
+                }
+            %}
+            {% include 'components/individual-card-tag.twig' with
+                {
+                    cardDom: '<img src="images/cards/04.png" alt="Citi® / AAdvantage® Platinum Select® MasterCard® FPO">',
+                    cardTitle: 'Citi® / AAdvantage® Platinum Select® MasterCard®',
+                    offerAmount: '60,000 points',
+                    hasBadges: false
+                }
+            %}
+            {% include 'components/individual-card-tag.twig' with
+                {
+                    cardDom: '<img src="images/cards/05.png" alt="Sony® Card from Capital One®">',
+                    cardTitle: 'Sony® Card from Capital One®',
+                    offerAmount: '50,000 points',
+                    hasBadges: false
+                }
+            %}
+        </div>
+    </div>
+</section>

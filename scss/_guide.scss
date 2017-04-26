@@ -1,0 +1,117 @@
+// Guide
+
+.guide {
+    // background: $white url(../images/bg-beginners-2.jpg) top center no-repeat !important; //overriding the .white class
+    // background-size: contain !important;
+    padding-bottom: 25rem;
+
+    header {
+
+        .main-nav {
+            left: 20.5rem;
+        }
+
+        .logo {
+            width: 20.5rem;
+            z-index: 2;
+            bottom: 1.2rem;
+            background: $navy;
+            padding-right: 3rem;
+        }
+
+        .sub-nav {
+            left: 20.8rem;
+        }
+    }
+
+    .ad {
+        display: none;
+    }
+
+    .guide-content-wrapper {
+        background: $white;
+        max-width: 119rem;
+        margin: 0 auto;
+    }
+
+    .guide-content {
+    }
+
+    h1 {
+        @include walsh-bold;
+        font-size: 3.6rem;
+        line-height: 0.8;
+        text-transform: none;
+        margin: 8.2rem auto 0;
+        width: calc(100% - 2 * #{$gut});
+        clear: initial;
+        max-width: calc(5 * #{$colgut} - #{$gut});
+    }
+
+    h5 {
+        @include walsh-light;
+        font-size: 2.4rem;
+        line-height: 1.25;
+        text-align: center;
+        width: calc(100% - 2 * #{$gut});
+        max-width: calc(7 * #{$colgut} - 3 * #{$gut});
+        margin: 1.6rem auto 8rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.66;
+        margin: 0 auto 2.9rem;
+        text-align: left;
+        padding: 0;
+    }
+
+    &.beginners {
+
+        .content {
+            padding-bottom: 25rem;
+        }
+    }
+
+    .javascript {
+        width: calc(100% - 4rem);
+        max-width: 91.5rem;
+        margin: 10rem auto 0;
+    }
+
+    #comments {
+       margin: 10rem auto;
+    }
+
+}
+
+@media only screen and (max-width: 1020px) {
+
+    .guide {
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    .guide {
+        background: none;
+
+        .card-pick {
+            float: none;
+            margin: 0 auto 3rem;
+
+            &.left {
+                float: none;
+            }
+
+            &.right {
+                float: none;
+            }
+        }
+
+        #comments {
+            // AR-MOBILE: Adding margin here for mobile
+           margin: 10rem 2rem -15rem;
+        }
+    }
+}

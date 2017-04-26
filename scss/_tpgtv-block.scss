@@ -1,0 +1,370 @@
+// _tpgtv-block.scss
+
+.tpgtv-block {
+    background: $black;
+    padding: 4rem 0 6rem;
+
+    .tpgtv-block-wrapper {
+        width: 100%;
+        max-width: $content-width + 4rem;
+        margin: -1rem auto 0;
+        overflow: auto;
+        padding: 0 2rem;
+    }
+
+    .section-header {
+        color: $white;
+
+        span {
+            background: $black;
+        }
+
+        &:before {
+            background: $white;
+        }
+    }
+
+    .section-subheader {
+        color: $white;
+    }
+
+    .tpgtv {
+
+        .main-video {
+            display: inline-block;
+            width: calc(100% - 27rem);
+
+            .main-video-wrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                svg {
+                    @include absolute-center;
+                    width: 12rem;
+
+                    .st0 {
+                        stroke: $white;
+                        fill: $white;
+                    }
+
+                    .st1 {
+                        stroke: $white;
+                        fill: $white;
+                    }
+                }
+            }
+
+            .meta {
+                width: 8 * $colgut;
+
+                a, a:hover, a:active, a:visited, a:link {
+                    color: $white;
+                    @include walsh-bold;
+                    text-decoration: none;
+                    font-size: 2.4rem;
+                    line-height: 1.25;
+                }
+            }
+        }
+
+        .widget {
+            margin: 0;
+
+            .title {
+                display: none;
+            }
+
+            &:before {
+                display: none;
+            }
+
+            .link {
+
+                a, a:hover, a:active, a:visited, a:link {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: calc(100% - 36rem);
+        margin: 1.7rem 2rem 0 0;
+        float: left;
+        position: relative;
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        .meta {
+            text-align: left;
+            overflow: hidden;
+
+            .video-title {
+                float: left;
+                width: calc(100% - 6rem);
+                max-width: calc(8 * #{$colgut});
+            }
+
+            .video-social {
+                float: right;
+                width: 6rem;
+            }
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            @include walsh-bold;
+            font-size: 2.4rem;
+            color: $white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $green;
+        }
+    }
+
+    .video-social {
+        @include ss-social;
+        color: $white;
+        font-size: 2rem;
+        margin: 1rem 0;
+
+        .twitter-icon {
+            transition: color 0.3s;
+
+            &:hover {
+                color: $green;
+                cursor: pointer;
+            }
+        }
+
+        .facebook-icon {
+            margin:0 0 0 1rem;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $green;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .side-content {
+        width: 100%;
+        max-width: 34rem;
+        float: right;
+        border: 0.5rem solid $white;
+        border-top: none;
+        padding: 1rem;
+
+        .title {
+            @include pressura-bold;
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 2;
+
+            span {
+                display: inline-block;
+                width: initial;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                background: $black;
+                color: $white;
+                padding: 0 1rem;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -1rem;
+                transform: translateY(-50%);
+                width: calc(100% + 2rem);
+                height: 0.5rem;
+                z-index: 1;
+                background: $white;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -1.5rem;
+                transform: translateY(-50%) translateY(-1.2rem);
+                width: calc(100% + 3rem);
+                height: 1.9rem;
+                z-index: 1;
+                background: $black;
+            }
+        }
+
+        .link {
+            border-bottom: 0.1rem solid $border-grey;
+            width: calc(100% - 1rem);
+            padding: 0 0;
+            margin: 1.5rem 0.5rem 0;
+            position: relative;
+
+            .play-icon {
+                width: 2rem;
+                @include inline-vertical;
+                position: static;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        .meta {
+            text-align: center;
+
+            a, a:hover, a:active, a:visited, a:link {
+                @include walsh-bold;
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $white;
+            }
+
+            a:hover {
+                color: $green;
+            }
+        }
+    }
+
+    .image-wrapper {
+        position: relative;
+    }
+
+    .play-icon {
+        @include absolute-center;
+        width: 10rem;
+
+        svg {
+
+            .st0 {
+                stroke: $white;
+                fill: $white;
+                stroke-width: 0.6567;
+                stroke-miterlimit: 10;
+                transition: all 0.3s;
+            }
+
+            .st1 {
+                fill: $white;
+                transition: all 0.3s;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+
+                .st0 {
+                    stroke: $green;
+                    fill: $green;
+                }
+
+                .st1 {
+                    fill: $green;
+                }
+            }
+        }
+    }
+
+    .more-link {
+        clear: both;
+        text-align: center;
+        padding: 4.5rem 0 0;
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $white;
+        }
+
+        a:hover {
+            color: $green;
+        }
+
+        &:after {
+            border-right: 0.2rem solid $white;
+            border-bottom: 0.2rem solid $white;
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+
+    .tpgtv-block {
+
+        .tpgtv-block-wrapper {
+            max-width: 9 * $colgut - $gut;
+        }
+
+        .main-content {
+            margin: 0 auto;
+            float: none;
+            max-width: 100%;
+        }
+
+        .side-content {
+            float: none;
+            clear: both;
+            max-width: 100%;
+            margin: 5rem auto;
+
+            .link {
+                width: calc(50% - 2rem);
+                display: inline-block;
+                margin: 2rem 0.7rem 0 1rem;
+                border: none;
+
+                img {
+                    width: 100%;
+                }
+
+                & + .link {
+                    margin: 2rem 1rem 0 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .tpgtv-block {
+
+        .side-content {
+            max-width: calc(100% - 4rem);
+            margin: 5rem auto;
+
+            .link {
+                border-bottom: 0.1rem solid $border-grey;
+                width: calc(100% - 1rem);
+                padding: 0;
+                margin: 1.5rem 0.5rem 0;
+                display: block;
+
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+}

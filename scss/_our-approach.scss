@@ -1,0 +1,57 @@
+// _our-approach.scss
+
+&.our-approach {
+    border: 0.5rem solid $navy;
+    border-top: none;
+
+    .title {
+        @include pressura-regular;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border: none;
+        position: relative;
+        margin-left: 2.2rem;
+        margin-bottom: 0;
+        width: 100%;
+        top: -1rem;
+
+        .circle {
+            position: absolute;
+            top: -0.2rem;
+            left: -1.2rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #00ffc6;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 2.3rem;
+            height: 0.5rem;
+            background: $navy;
+            left: -2.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 13.5rem);
+            height: 0.5rem;
+            background: $navy;
+            right: 1.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        padding: 0 2rem;
+    }
+}

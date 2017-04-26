@@ -1,0 +1,136 @@
+// _account-panel.scss
+
+.account-panel {
+    // width: 3 * $colgut - $gut;
+    width: 40rem;
+    margin: 5rem $colgut 0 0;
+    transition: all 0.3s;
+
+    .carat {
+        display: none;
+    }
+
+    .user-name {
+        margin: -5rem 0 0 0;
+        border: 0.2rem solid transparent;
+        width: 25rem;
+
+        & + .edit {
+            display: block;
+            margin: 0.1rem 0 1.3rem 0;
+        }
+
+        &:focus {
+            border-color: $green;
+            outline: none;
+            padding: 1.2rem;
+        }
+
+        &:focus + .edit {
+
+            .btn-edit {
+                display: none;
+            }
+            .save-cancel {
+                display: block;
+            }
+        }
+    }
+
+    .newsletter-controls {
+
+        .newsletter-control {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 1.5rem;
+
+            .control-label {
+                @include walsh-bold;
+                color: $navy;
+                width: calc(100% - 9rem);
+
+                span {
+                    @include walsh-light;
+                }
+            }
+
+            .control-macro {
+                background: $lightest-grey;
+                padding: 0.5rem 1rem;
+                width: 6.5rem;
+                height: 3.3rem;
+                border-radius: 5rem;
+                position: relative;
+                transition: background 0.2s;
+
+                &.enabled {
+                    background: $green;
+
+                    .control-micro {
+
+                        .dot {
+                            transform: translateX(3.3rem) translateY(-50%);
+                        }
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .control-micro {
+
+                    svg {
+                        height: 1.5rem;
+
+                        .cls-1 {
+                            fill: $navy;
+                        }
+                    }
+
+                    #check-icon {
+                        margin: 0 0.3rem 0 0;
+                    }
+
+                    #x-icon {
+                        position: relative;
+                        top: 0.1rem;
+                    }
+
+                    .dot {
+                        position: absolute;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        top: 50%;
+                        left: 0;
+                        transform: translateX(0.7rem) translateY(-50%);
+                        background: $navy;
+                        border-radius: 50%;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .account-panel {
+        margin: 5rem 4rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+
+    .account-panel {
+        width: 100%;
+        margin: 5rem 0 0;
+        padding: 0rem 2rem;
+
+        .carat {
+            display: inline-block;
+        }
+    }
+}

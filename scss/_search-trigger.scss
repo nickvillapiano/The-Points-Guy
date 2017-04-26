@@ -1,0 +1,51 @@
+// _search-trigger.scss
+
+.search-trigger {
+    position: absolute;
+    right: 0;
+    bottom: 1.5rem;
+    width: 34rem;
+    transition: width 0.3s;
+
+    .search-trigger {
+        width: 100%;
+
+        .search-icon {
+            width: 1.8rem;
+            position: absolute;
+            top: 50%;
+            left: 1.6rem;
+            transform: translateY(-50%);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1.2rem 2rem 1.2rem 5.4rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &::-webkit-input-placeholder {
+                @include search-placeholder;
+            }
+
+            &::-moz-placeholder {
+                @include search-placeholder;
+            }
+
+            &:-ms-input-placeholder {
+                @include search-placeholder;
+            }
+
+            &:-moz-placeholder {
+                @include search-placeholder;
+            }
+        }
+    }
+}

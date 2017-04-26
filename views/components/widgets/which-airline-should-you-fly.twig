@@ -1,0 +1,71 @@
+<!-- Widget - Which Airline Should You Fly -->
+
+<div class="widget which-airline-should-you-fly {{class}}">
+    <div class="title">
+        Which Airline<br>
+        Should You Fly?
+    </div>
+    <div class="instructions">
+        Choose airlines that offer frequent service to the airports you'll use most.
+    </div>
+    <div class="airline-picker">
+        <img src="images/icons/arrow-icon.svg" alt="arrow icon">
+        <span class="input-label">
+            It looks like you're near
+        </span>
+        <input type="text" name="airport-picker" value="JFK & LaGuardia">
+    </div>
+    <div class="airline-suggestions">
+        <div class="airline-suggestion">
+            <div class="airline-logo">
+                <img src="images/delta-logo-small.png">
+            </div>
+            <div class="tout">
+                The most service from New York, and highly reliable for a major carrier.
+            </div>
+            <button class="apply">
+                Sign Up for Skymiles
+            </button>
+            {% include 'components/im-a-member.twig' %}
+        </div>
+        <div class="airline-suggestion">
+            <div class="airline-logo">
+                <img src="images/united-logo-small.png">
+            </div>
+            <div class="tout">
+                More international options and often better value for business class travel.
+            </div>
+            <button class="apply">
+                Sign Up for MileagePlus
+            </button>
+            {% include 'components/im-a-member.twig' %}
+        </div>
+        <div class="airline-suggestion">
+            <div class="airline-logo">
+                <img src="images/jetblue-logo-small.png">
+            </div>
+            <div class="tout">
+                Unbeatable domestic deals and customer service.
+            </div>
+            <button class="apply">
+                Sign Up for TrueBlue
+            </button>
+            {% include 'components/im-a-member.twig' %}
+        </div>
+        <div class="airline-suggestion">
+            <div class="airline-logo">
+                <img src="images/american-logo-small.png">
+            </div>
+            <div class="tout">
+                Features a newer fleet, and our favorite frequent flyer program overall.
+            </div>
+            <button class="apply">
+                Sign Up for AAdvantage
+            </button>
+            {% include 'components/im-a-member.twig' %}
+        </div>
+        <div class="all-items-link">
+            <a href="#">Browse all Loyalty Programs</a>
+        </div>
+    </div>
+</div>

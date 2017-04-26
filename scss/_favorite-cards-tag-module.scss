@@ -1,0 +1,142 @@
+// _favorite-cards-tag-module.scss
+
+.favorite-cards-tag-module {
+	padding: 5rem 0;
+	margin: 5rem 0;
+	background: $grey9;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        z-index: -1;
+        background: $grey9;
+    }
+
+    &:after {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        z-index: -1;
+        background: $grey9;
+    }
+
+	.favorite-cards-tag-module-wrapper {
+		width: calc(100% - 4rem);
+		max-width: $content-width;
+	}
+
+    .section-header {
+        margin-bottom: 0;
+    }
+
+	.links-wrapper {
+		text-align: center;
+		margin: 2rem 0 0 0;
+	}
+
+	.link {
+        @include inline-vertical;
+        border-bottom: none;
+        padding: 0 0.5rem 0 1rem;
+        margin: 0;
+        @include walsh-bold;
+
+        .meta {
+            @include inline-vertical;
+            margin: 0 0 0 2rem;
+            text-align: left;
+
+            .meta-title {
+                font-size: 1.4rem;
+            }
+
+            .meta-description {
+                font-size: 1.4rem;
+                @include walsh-light;
+            }
+        }
+
+        &:last-of-type {
+            border-right: 0.1rem solid transparent;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .meta {
+                color: $royal;
+            }
+        }
+    }
+
+	.card-img-wrapper {
+	    @include inline-vertical;
+	    width: 7.1rem;
+	    margin: 0;
+	    position: relative;
+
+	    img {
+	        position: relative;
+	        z-index: 2;
+	        margin: 0.5rem 0 0 0;
+	    }
+
+	    &:before {
+	        content: "";
+	        @include absolute-center;
+	        background: $lightest-grey;
+	        width: 6.5rem;
+	        height: 6.5rem;
+	        border-radius: 50%;
+	        z-index: 1;
+	    }
+	}
+}
+
+@media only screen and (max-width: 960px) {
+
+    .favorite-cards-tag-module {
+
+        .links-wrapper {
+            overflow: auto;
+            max-width: 50rem;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        .link {
+            width: 50%;
+            display: block;
+            float: left;
+            margin: 3rem 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .favorite-cards-tag-module {
+
+        .links-wrapper {
+            max-width: 100%;
+            padding: 2rem 0;
+            margin: 1rem 0 0;
+        }
+
+        .link {
+            width: 25rem;
+            margin: 3rem auto 0;
+            display: block;
+            float: none;
+            text-align: left;
+        }
+    }
+}

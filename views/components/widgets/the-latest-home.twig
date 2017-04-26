@@ -1,0 +1,36 @@
+<!-- Widget - The Latest / Home -->
+
+<div class="widget the-latest-home {{class}}">
+    <div class="title">
+        <span class="before"></span>
+        <img src="images/the-latest.svg" alt="The Latest FPO">
+        <span class="after"></span>
+    </div>
+    {% include 'components/the-latest-home-individual-link.twig' with
+        {
+            timestamp: "5 minutes ago",
+            title: "JetBlue is Expanding Mint Service to Grenada"
+        }
+    %}
+    {% include 'components/the-latest-home-individual-link.twig' with
+        {
+            timestamp: "22 minutes ago",
+            title: "The Park Hyatt Hamburg’s Park Suite King"
+        }
+    %}
+    {% include 'components/the-latest-home-individual-link.twig' with
+        {
+            timestamp: "11:38am",
+            title: "US Cities to Australia from $749 Round-Trip"
+        }
+    %}
+    {% include 'components/the-latest-home-individual-link.twig' with
+        {
+            timestamp: "Yesterday",
+            title: "United Will Test Out Automated Security Lanes at Its Hubs This Fall"
+        }
+    %}
+    <div class="more-link">
+        <a href="#">Read More</a>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+// _disclosure.scss
+
+.disclosure {
+    position: absolute;
+    z-index: 1;
+    bottom: -3.2rem;
+    right: 0;
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        @include walsh-bold;
+        font-size: 1.4rem;
+        color: $royal;
+        background: $white;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+
+    .disclosure {
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+
+    .disclosure {
+        top: 1.6rem;
+        left: 0;
+        bottom: initial;
+        right: initial;
+        display: none;
+
+        span {
+            color: $white;
+            background: transparent;
+            text-decoration: underline;
+        }
+    }
+
+    .home-nav {
+
+        &.show {
+
+            .home-nav-wrapper {
+
+                .disclosure {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+// _two-one-container.scss
+
+.two-one-container {
+    background: $grey9;
+    padding: 5rem 0;
+    margin: 5rem 0;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: $grey9;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        background: $grey9;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        z-index: -1;
+    }
+
+    .two-one-container-wrapper {
+        width: calc(100% - 4rem);
+        margin: 0 auto;
+        max-width: $content-width;
+
+        section {
+            display: inline-block;
+            width: calc(100% - 36rem);
+            margin: 0 1.5rem 0 0;
+
+            & + section {
+                width: 34rem;
+                margin: 0 0 0 0;
+            }
+        }
+    }
+
+    // AR: Footer mod -- kill bottom margin
+    .hub-wrapper & {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+
+    .two-one-container {
+
+        .two-one-container-wrapper {
+
+            section {
+                width: 100%;
+                margin: 0;
+
+                & + section {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,300 @@
+// _cards-feed.scss
+
+.cards-feed {
+
+    .cards-feed-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+
+    .cards-filter {
+
+    }
+
+    .cards-feed-container {
+        display: flex;
+        flex-direction: column;
+
+        &.searching {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 -0.5rem;
+        }
+    }
+
+    .cards-filter-wrapper {
+        width: 100%;
+        border: 0.1rem solid $border-grey;
+        padding: 2rem;
+        margin: 0 0 2.5rem 0;
+        text-align: center;
+
+        input {
+            @include inline-vertical;
+            @include walsh-light-oblique;
+            font-size: 2rem;
+            text-align: center;
+            border: 0;
+            padding: 0;
+            outline: none;
+
+            &::-webkit-input-placeholder {
+                background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjIuMyAyMzIuNiI+CiAgPHBhdGggZD0iTTIyMi4zIDIxMy41TDE3NyAxNjguMmMxNS44LTE3LjkgMjUuNC00MS4zIDI1LjQtNjdDMjAyLjQgNDUuNCAxNTcgMCAxMDEuMiAwUzAgNDUuNCAwIDEwMS4yQzAgMTU3IDQ1LjQgMjAyLjQgMTAxLjIgMjAyLjRjMjAuNCAwIDM5LjQtNi4xIDU1LjMtMTYuNWw0Ni43IDQ2LjcgMTkuMS0xOS4xek0yNyAxMDEuMkMyNyA2MC4zIDYwLjMgMjcgMTAxLjIgMjdzNzQuMiAzMy4zIDc0LjIgNzQuMi0zMy4zIDc0LjItNzQuMiA3NC4yUzI3IDE0Mi4xIDI3IDEwMS4yeiIgY2xhc3M9ImNscy0xIi8+Cjwvc3ZnPg==) no-repeat left;
+                @include walsh-light-oblique;
+                font-size: 2rem;
+                color: $black;
+            }
+
+            &:focus::-webkit-input-placeholder {
+                opacity: 0;
+            }
+        }
+    }
+
+    .cards-fake-placeholder {
+        display: none;
+    }
+
+    .line-item {
+        padding: 0 0 1.5rem 0;
+        margin: 0 0 1.5rem 0;
+        border-bottom: 0.1rem solid $grey9;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        .card-img {
+            @include inline-vertical;
+            width: 16.5rem;
+            height: 9rem;
+            position: relative;
+            margin: 0 1.5rem 0 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .img-macro {
+                width: 11rem;
+                @include absolute-center;
+
+                &:before {
+                    content: "";
+                    @include absolute-center;
+                    width: 9rem;
+                    height: 9rem;
+                    background: $lightest-grey;
+                    border-radius: 50%;
+                    margin-top: -0.2rem;
+                }
+
+                img {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .cards-feed-container.searching .line-item {
+        width: calc(100% * (1/3) - 1rem);
+        margin: 0rem 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0;
+        align-items: center;
+        justify-content: flex-start;
+        display: none;
+
+        &.search-result {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 900px) {
+            width: calc(100% * (1/2) - 1rem);
+        }
+
+        @media only screen and (max-width: 660px) {
+            width: calc(100% - 1rem);
+        }
+    }
+
+    .cards-feed-container.searching .card-img {
+        background: $grey9;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.12%;
+
+        .img-macro {
+            width: auto;
+
+            &:before {
+                width: 80%;
+                height: 0;
+                padding-bottom: 80%;
+            }
+        }
+    }
+
+    .meta {
+        @include inline-vertical;
+        margin: 0 2rem 0 0;
+        width: calc(100% - 40rem);
+
+        .title {
+            font-size: 2rem;
+            transition: color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: $royal;
+            }
+
+            em {
+                font-style: normal;
+            }
+        }
+
+        .offer {
+            @include walsh-light;
+            font-size: 1.6rem;
+            color: $navy;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+
+    .cards-feed-container.searching .meta {
+        width: auto;
+        text-align: center;
+        margin-top: 1rem;
+
+        .title {
+            margin-bottom: 4rem;
+            em {
+                color: $royal
+            }
+        }
+
+        .offer {
+            display: none;
+        }
+    }
+
+    .badges {
+        @include inline-vertical;
+        display: none;
+
+        .badge {
+            @include inline-vertical;
+            padding: 0 2rem 0 0;
+            margin: 0 2rem 0 0;
+            border-right: 0.1rem solid $border-grey;
+
+            svg {
+                @include inline-vertical;
+                width: 2rem;
+
+                .cls-1 {
+                    fill: $navy;
+                    transition: all 0.2s;
+                }
+            }
+
+            span {
+                @include inline-vertical;
+                @include walsh-bold;
+                font-size: 1.4rem;
+                color: $navy;
+                transition: color 0.2s;
+            }
+
+            &:last-of-type {
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                span {
+                    color: $green;
+                }
+
+                svg {
+
+                    .cls-1 {
+                        fill: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .i-have-this-card {
+        @include inline-vertical;
+        margin: 0;
+        width: 16rem;
+    }
+
+    .cards-feed-container.searching .i-have-this-card {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .cards-feed {
+
+        .meta {
+
+            .offer {
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+
+            .badges {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cards-feed {
+
+        .line-item {
+
+            .card-img {
+                margin: 0 auto;
+                width: 10rem;
+
+                .img-macro {
+
+                    &:before {
+                    }
+                }
+            }
+        }
+
+        .meta {
+            width: calc(100% - 12rem);
+            margin: 0 0 0 1rem;
+        }
+
+        .i-have-this-card {
+            margin: 0 0 0 11rem;
+
+            svg {
+            }
+        }
+
+        .cards-feed-container.searching .i-have-this-card {
+            margin: 0;
+        }
+    }
+}

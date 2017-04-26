@@ -1,0 +1,29 @@
+<!-- Three Articles Module -->
+
+<section class="three-articles-module deals-module {{class}}">
+    <div class="section-header">
+        <span>
+            {{title}}
+        </span>
+    </div>
+
+    <div class="deals-module-wrapper">
+        <div class="article">
+            <img class="deals-module-image" src="images/deals-module1.jpg" alt="Deal FPO">
+            <a href="#">The TPG Guide To Chase Ultimate Rewards</a>
+        </div>
+        <div class="article">
+            <img class="deals-module-image" src="images/related3.jpg" alt="Deal FPO">
+            <a href="#">Chase Sapphire Preferred: Our Complete Review</a>
+        </div>
+        <div class="article">
+            <img class="deals-module-image" src="images/related5.jpg" alt="Deal FPO">
+            <a href="#">Ten Tips for Traveling with Sapphire </a>
+        </div>
+        {% if isDeals %}
+            <div class="more-link">
+                <a href="#">All Deals</a>
+            </div>
+        {% endif %}
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<!-- Gallery module -->
+
+<section class="gallery-module">
+    <div class="x-close">
+        <svg version="1.1" id="x-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+        </svg>
+    </div>
+    <div class="gallery-module-wrapper">
+        <div class="gallery-header">
+            <div class="pagination">
+                02 / 13
+            </div>
+            <div class="shares">
+                <span class="twitter-icon">
+                    &#62993;
+                </span>
+                <span class="facebook-icon">
+                    &#62992;
+                </span>
+            </div>
+        </div>
+        {% include 'components/inline-img.twig' with
+            {
+                filename: 'inline-photo.jpg',
+                caption: 'A view of the beach from the lobby.',
+                credit: 'Jan Warner/The Points Guy'
+            }
+        %}
+        <div class="arrows">
+            <div class="arrow left-arrow">
+                <div class="lt-gt">
+                </div>
+            </div>
+            <div class="arrow right-arrow">
+                <div class="lt-gt">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

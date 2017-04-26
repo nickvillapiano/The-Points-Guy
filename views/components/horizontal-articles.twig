@@ -1,0 +1,120 @@
+<!-- Horizontal Articles -->
+
+<section class="horizontal-articles">
+    {% if isSearchState1 %}
+
+    {% else %}
+        <div class="section-header">
+            <span>
+                Most Discussed Articles
+            </span>
+        </div>
+    {% endif %}
+
+    <div class="horizontal-articles-wrapper">
+        <!-- 2/3 content -->
+        <div class="horizontal-articles-macro left">
+            <div class="articles">
+
+                <div class="article">
+                    <img class="thumbnail" src="images/quantas-thumb.jpg" alt="FPO">
+                    <div class="link">
+                        <div class="label stripped">
+                            Deals
+                        </div>
+                        <a href="#">What Are Points & Miles Worth? July Monthly Valuations</a>
+                        <div class="timestamp">
+                            July 10th, 2016
+                        </div>
+                    </div>
+                    <div class="comments-icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                            <title>comment-icon</title>
+                            <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+                        </svg>
+                        <span class="counter">
+                            169
+                        </span>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <img class="thumbnail" src="images/article-fpo10.jpg" alt="FPO">
+                    <div class="link">
+                        <div class="label stripped">
+                            Deals
+                        </div>
+                        <a href="#">Earn 100,000 Membership Rewards Points with this Amex Platinum Offer</a>
+                        <div class="timestamp">
+                            June 6th, 2016
+                        </div>
+                    </div>
+                    <div class="comments-icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                            <title>comment-icon</title>
+                            <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+                        </svg>
+                        <span class="counter">
+                            127
+                        </span>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <img class="thumbnail" src="images/article-fpo11.jpg" alt="FPO">
+                    <div class="link">
+                        <div class="label stripped">
+                            Deals
+                        </div>
+                        <a href="#">How to Book Etihad Partner Award Flights, and Why It’s Worth the Effort</a>
+                        <div class="timestamp">
+                            April 20th, 2016
+                        </div>
+                    </div>
+                    <div class="comments-icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                            <title>comment-icon</title>
+                            <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+                        </svg>
+                        <span class="counter">
+                            112
+                        </span>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <img class="thumbnail" src="images/quantas-thumb.jpg" alt="FPO">
+                    <div class="link">
+                        <div class="label stripped">
+                            Deals
+                        </div>
+                        <a href="#">What Are Points & Miles Worth? July Monthly Valuations</a>
+                        <div class="timestamp">
+                            July 10th, 2016
+                        </div>
+                    </div>
+                    <div class="comments-icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                            <title>comment-icon</title>
+                            <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+                        </svg>
+                        <span class="counter">
+                            169
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% if isSearchState1 %}
+
+        {% else %}
+            <!-- 1/3 content -->
+            {% include 'components/widgets/featured-comment.twig' with
+                {
+                    class: "inset right on-homepage"
+                }
+            %}
+        {% endif %}
+    </div>
+</section>

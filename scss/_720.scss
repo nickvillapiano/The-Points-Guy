@@ -1,0 +1,106 @@
+// _720.scss
+
+@media only screen and (max-width: 720px) {
+
+.article {
+
+
+}
+
+// .related-links {
+//     text-align: center;
+//     margin-bottom: 4rem;
+
+//     .related-link {
+//         display: inline-block;
+//         vertical-align: top;
+//         width: calc(50% - 1.3rem);
+//         margin: 0 2rem 4.5rem 0;
+//         float: none;
+
+//         &:nth-of-type(odd) {
+//             margin-right: 0;
+//         }
+
+//         &:nth-of-type(4) {
+//             margin: 0 2rem 4.5rem 0;
+//         }
+
+//         &:nth-of-type(5) {
+//             width: calc(50% - 1.3rem);
+//         }
+//     }
+// }
+
+.card-pick {
+    max-width: calc(100% - #{2 * $gut});
+    margin: 0.9rem auto $gut;
+
+    .the-card {
+        text-align: left;
+    }
+
+    & + * {
+        clear: left;
+    }
+
+    &.left, &.right {
+        margin: 0.9rem auto $gut;
+        float: none;
+    }
+}
+
+// .related-links {
+//     text-align: center;
+//     margin-bottom: 4rem;
+
+//     .related-link {
+//         display: inline-block;
+//         vertical-align: top;
+//         width: calc(50% - 1.3rem);
+//         margin: 0 2rem 4.5rem 0;
+//         float: none;
+
+//         &:nth-of-type(odd) {
+//             margin-right: 0;
+//         }
+
+//         &:nth-of-type(4) {
+//             margin: 0 2rem 4.5rem 0;
+//         }
+
+//         &:nth-of-type(5) {
+//             width: calc(50% - 1.3rem);
+//         }
+//     }
+// }
+
+.javascript {
+
+    .more-things-to-know {
+
+        ul {
+            column-count: 1;
+        }
+    }
+
+    .apply {
+        display: block;
+        margin: 2rem auto;
+    }
+
+    .i-have-this-card {
+        clear: both;
+        display: block;
+        margin: 0;
+    }
+}
+
+.article-intro {
+
+    .intro-micro {
+        padding: 0 2rem 0 0;
+    }
+}
+
+}

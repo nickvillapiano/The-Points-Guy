@@ -1,0 +1,35 @@
+// _alert-saved.scss
+
+.alert-saved {
+    position: fixed;
+    z-index: 10;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateY(100%) translateY(3rem) translateX(-50%);
+    color: $navy;
+    background: $grey9;
+    padding: 1.5rem 3rem;
+    @include inline-vertical;
+    @include walsh-bold;
+    transition: all 0.3s;
+
+    svg {
+        background: $green;
+        padding: 1.7rem 1.5rem;
+        border-radius: 50%;
+        width: 5rem;
+        @include inline-vertical;
+
+        .cls-1 {
+            fill: $navy;
+        }
+    }
+
+    span {
+        @include inline-vertical;
+    }
+
+    &.show {
+        transform: translateX(-50%);
+    }
+}

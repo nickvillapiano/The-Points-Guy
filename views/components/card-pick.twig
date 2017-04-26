@@ -1,0 +1,46 @@
+<!-- Card pick -->
+
+<div class="card-pick {{class}}">
+    <div class="card-pick-content">
+        <div class="title">
+            {{title}}
+        </div>
+
+        {% include 'components/card-pick-notification.twig' %}
+
+        <div class="the-card">
+            <span class="card-title">
+                {{cardtitle|raw}}
+            </span>
+            <div class="card-img">
+                {{cardimg|raw}}
+                <!-- <div class="card-shadow"></div> -->
+            </div>
+        </div>
+        <div class="card-info">
+            <div class="endorsement">
+                {{endorsement}}
+            </div>
+            <div class="terms">
+                <div class="terms-heading">
+                    Key Stats
+                </div>
+                {{keystats}}
+            </div>
+            <div class="tooltip-trigger">
+                <span>See</span><span>Hide</span> Terms &amp; Conditions
+            </div>
+        </div>
+        <div class="actionables">
+            <button class="apply">
+                Apply at {{url}}
+            </button>
+            {% include 'components/i-have-this-card.twig' %}
+        </div>
+        <div class="related-content">
+            <a href="">{{related}}</a>
+        </div>
+    </div>
+    {% include 'components/card-pick-tooltip.twig' %}
+
+</div>

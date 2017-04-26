@@ -1,0 +1,32 @@
+<!-- About Content -->
+
+{% include 'components/about-hero.twig' %}
+
+{% include 'components/widgets/widget-author-stats.twig' with
+    {
+        sectionTitle: "My Travel <br>Stats",
+    }
+%}
+
+<div class="content">
+
+    {% include 'components/about-bio.twig' %}
+
+    {% include 'components/latest-updates.twig' %}
+
+    {# {% include 'components/five-cards-now.twig' %} #}
+
+    {% include 'components/favorite-cards-tag-module.twig' with
+        {
+            isAbout: true
+        }
+    %}
+
+    {# {% include 'components/tpgtv-block.twig' %} #}
+
+    {% include 'components/articles-feed.twig' %}
+
+    {# {% include 'components/press-grid.twig' %} #}
+
+</div>
+

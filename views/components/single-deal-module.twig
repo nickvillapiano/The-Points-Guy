@@ -1,0 +1,32 @@
+<!-- Single Deal Module -->
+
+<section class="single-deal-module">
+    <div class="widget">
+        <div class="title">
+            <span>
+                {% if isChase %}
+                    Deals For this Card
+                {% elseif isHubTag %}
+                    Family Travel Deals
+                {% else %}
+                    The Latest Deals
+                {% endif %}
+            </span>
+        </div>
+        <div class="article">
+            <div class="image-wrapper">
+                <div class="timestamp">
+                    22 minutes ago
+                </div>
+                <img class="deals-module-image" src="images/deals-module1.jpg" alt="Deal FPO">
+            </div>
+            <a href="#">New York to Amsterdam from $293 Round-trip</a>
+        </div>
+    </div>
+    {% include 'components/more-link.twig' with
+        {
+            linkTarget: "#",
+            linkText: "All Deals"
+        }
+    %}
+</section>

@@ -1,0 +1,39 @@
+<!-- Press Grid -->
+
+<section class="press-grid">
+    <div class="press-grid-wrapper">
+        {% include 'components/section-header.twig' with
+            {
+                title: "Press"
+            }
+        %}
+        <div class="press-grid-macro">
+            {% include 'components/individual-press.twig' with
+                {
+                    imageUrl: '<img src="images/bloomberg-logo.png" alt="Bloomberg logo FPO">',
+                    copy: '“...an invaluable resource for points-obsessed travelers — or those in training”',
+                    class: "quotation"
+                }
+            %}
+            {% include 'components/individual-press.twig' with
+                {
+                    imageUrl: '<img src="images/nyt-logo.png" alt="New York Times logo FPO">',
+                    copy: 'Named one of the worlds top 10 travel sites for 2016'
+                }
+            %}
+            {% include 'components/individual-press.twig' with
+                {
+                    imageUrl: '<img src="images/msnbc-logo.png" alt="MSNBC logo FPO">',
+                    copy: '“...Authoritative ...addicting ...inspiring”',
+                    class: "quotation"
+                }
+            %}
+        </div>
+        {% include 'components/more-link.twig' with
+            {
+                linkTarget: "#",
+                linkText: "See all press, media mentions, & interviews"
+            }
+        %}
+    </div>
+</section>

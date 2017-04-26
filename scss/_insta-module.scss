@@ -1,0 +1,298 @@
+// _insta-module.scss
+
+.insta-module {
+    margin: 0 0 10rem;
+
+    .insta-module-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $content-width;
+        margin: 0 auto;
+        position: relative;
+        transition: max-width 0.3s;
+        transition-delay: 0.1s;
+    }
+
+    .insta-blocks {
+        overflow: hidden;
+    }
+
+    .insta-block {
+        float: left;
+        width: 26.6rem; // 20%
+        height: 26.6rem;
+        position: relative;
+        overflow: hidden;
+
+        &:nth-of-type(7) {
+            float: right;
+        }
+
+        img {
+            transition: transform 0.2s;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(0deg, $black, transparent);
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+
+        .geotag {
+            background: transparent;
+            transition: opacity 0.25s;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            width: calc(100% - 4rem);
+
+            svg {
+                width: 1.3rem;
+                @include inline-vertical;
+
+                .cls-1 {
+                    fill: $white;
+                    transition: all 0.2s;
+                }
+            }
+
+            .location-title {
+                @include walsh-bold;
+                color: $white;
+                @include inline-vertical;
+                line-height: 1;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            img {
+                transform: scale(1.05);
+            }
+
+            .overlay {
+                opacity: 0;
+            }
+
+            .geotag {
+                opacity: 0;
+            }
+        }
+    }
+
+    .follow-meta {
+        background: $black;
+        color: $white;
+        width: calc(26.6rem * 3);
+        height: 26.6rem;
+        position: absolute;
+        bottom: 0;
+        left: 26.6rem;
+        padding: 3.5rem;
+        @include walsh-bold;
+
+        .follow-meta-wrapper {
+            @include absolute-center;
+            position: relative;
+            overflow: auto;
+        }
+
+        .intro {
+
+            .brian-profile-img {
+                width: 5.5rem;
+                overflow: hidden;
+                border-radius: 50%;
+
+                img {
+                    display: block;
+                }
+            }
+
+            .name-handle {
+                font-size: 3rem;
+                margin: 1rem 0 1.7rem 0;
+
+                .name {
+                    border-right: 0.1rem solid $white;
+                    padding: 0 1.5rem 0 0;
+                    margin: 0 2rem 0 0;
+                }
+
+                .handle {
+
+                    a, a:hover, a:active, a:visited, a:link {
+                        color: $white;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .quick-description {
+            font-size: 1.8rem;
+            line-height: 1.333;
+            width: 50%;
+            float: left;
+        }
+
+        .button {
+
+            &.follow {
+                background: $white;
+                color: $black;
+                display: inline-block;
+                float: right;
+                transition: all 0.3s;
+                border: 0.1rem solid $white;
+
+                #instagram-icon {
+                    width: 2rem;
+                    display: inline-block;
+                    vertical-align: bottom;
+
+                    .cls-1 {
+                        fill: $black;
+                        transition: all 0.3s;
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    text-decoration: underline;
+                    margin: 0 0 0 1rem;
+                }
+
+                &:hover {
+                    background: $black;
+                    color: $green;
+                    border: 0.1rem solid $green;
+
+                    #instagram-icon {
+
+                        .cls-1 {
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+
+    .insta-module {
+
+        .insta-module-wrapper {
+            max-width: calc(26.6rem * 4);
+        }
+
+        .insta-block {
+            display: none;
+
+            &:nth-of-type(1) {
+                display: block;
+            }
+
+            &:nth-of-type(2) {
+                display: block;
+            }
+
+            &:nth-of-type(3) {
+                display: block;
+            }
+
+            &:nth-of-type(4) {
+                display: block;
+            }
+        }
+
+        .follow-meta {
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+
+    .insta-module {
+
+        .insta-module-wrapper {
+            max-width: calc(26.6rem * 3);
+        }
+
+        .insta-block {
+            display: none;
+
+            &:nth-of-type(4) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 840px) {
+
+    .insta-module {
+
+        .insta-module-wrapper {
+            max-width: calc(26.6rem * 2);
+        }
+
+        .insta-block {
+            display: none;
+
+            &:nth-of-type(4) {
+                display: block;
+            }
+        }
+
+        .follow-meta {
+            height: 100%;
+
+            .follow-meta-wrapper {
+                top: initial;
+                transform: translateX(-50%);
+            }
+
+            .quick-description {
+                width: 100%;
+            }
+
+            .button {
+
+                &.follow {
+                    float: left;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .insta-module {
+
+        .insta-module-wrapper {
+            max-width: calc(18rem * 2);
+        }
+
+        .insta-block {
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+}

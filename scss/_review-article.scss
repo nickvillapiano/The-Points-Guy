@@ -1,0 +1,73 @@
+// _review-article.scss
+
+.review-article {
+
+    .article-header {
+        color: $black;
+        width: 100%;
+        background: none;
+
+        .title {
+            text-shadow: none;
+
+            &:hover {
+                color: $royal;
+            }
+        }
+
+        .timestamp {
+            color: $black;
+        }
+    }
+
+    .share-icons {
+        margin-top: -0.8rem;
+
+        .twitter-icon {
+            color: $twitter;
+            line-height: 1.45;
+        }
+
+        .facebook-icon {
+            color: $facebook;
+        }
+
+        .comments-icon {
+
+            svg {
+
+                .cls-1 {
+                    fill: $light-grey;
+                }
+            }
+        }
+
+        .link-icon {
+
+            svg {
+
+                .cls-1 {
+                    fill: $navy !important;
+                }
+            }
+        }
+    }
+
+    .article-content {
+        width: 9 * $colgut - $gut;
+        margin: 0 auto;
+        padding: 0;
+        float: none;
+        transition: width 0.2s, margin 0.2s;
+        transition-delay: 0.2s;
+    }
+
+    .inline-img {
+        width:  11 * $colgut - $gut;
+        width: 132%;
+        margin-left: -11.75rem;
+        margin-left: -15.9%;
+        transition: width 0.2s, margin 0.2s;
+        transition-delay: 0.2s;
+    }
+}

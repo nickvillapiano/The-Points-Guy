@@ -1,0 +1,79 @@
+{% include "components/header-home.twig" %}
+
+<div class="above-footer white">
+    {% include "components/home-ctas.twig" %}
+
+    {% include "components/home-nav.twig" %}
+
+    <div class="content">
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Table"
+            }
+        %}
+        {% include 'components/table.twig' %}
+
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Minimal dropdown"
+            }
+        %}
+        {% include 'components/select.twig' with
+            {
+                options: ['All Options']
+            }
+        %}
+
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Styled dropdown"
+            }
+        %}
+        {% include 'components/styled-dropdown.twig' %}
+
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Standard input"
+            }
+        %}
+        {% include 'components/standard-input.twig' with
+            {
+                placeholder: "Standard Input"
+            }
+        %}
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Toggle switch"
+            }
+        %}
+        {% include 'components/newsletter-control.twig' with
+            {
+                isElement: true
+            }
+        %}
+
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Bullet List"
+            }
+        %}
+        {% include 'components/bullet-list.twig' %}
+
+        {% include 'components/section-header.twig' with
+            {
+                title: "Brand Colors"
+            }
+        %}
+        {% include 'components/color-list.twig' %}
+
+    </div>
+
+</div>
+
+{% include "components/footer.twig" %}

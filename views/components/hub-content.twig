@@ -1,0 +1,32 @@
+<!-- Home Content -->
+
+{% include 'components/hub-hero.twig' %}
+
+{% include 'components/current-offer-bar.twig' %}
+
+<div class="content">
+
+    {% include 'components/three-articles-module.twig' with
+        {
+            class: "essential-reading",
+            title: "Essential Reading",
+
+        }
+    %}
+
+    {% include 'components/hub-50-50.twig' %}
+
+
+    {% include 'components/articles-feed.twig' with
+        {
+
+        }
+    %}
+
+    {% include 'components/two-one-container.twig' with
+        {
+
+        }
+    %}
+
+</div>

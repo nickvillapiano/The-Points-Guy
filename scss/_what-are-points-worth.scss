@@ -1,0 +1,13 @@
+// _points-valuation-horizontal.scss
+
+&.points-valuation-horizontal {
+    background: red;
+
+    .meta-title {
+        width: 10rem;
+
+        &:first-line {
+            width: 6rem;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// _toc-trigger.scss
+
+.toc-trigger {
+    position: fixed;
+    top: 5%;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.3s;
+
+    &.show {
+        transform: translateX(0);
+    }
+
+    .icons {
+        border: 0.1rem solid $border-grey;
+        border-right: 0;
+        background: $white;
+        padding: 1.5rem 1.5rem 0.5rem;
+
+        .back-to-top {
+            @include inline-vertical;
+
+            svg {
+                width: 2.5rem;
+
+                .cls-1 {
+                    stroke-width: 2;
+                    stroke: $royal;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .cls-1 {
+                        stroke: $green;
+                    }
+                }
+            }
+        }
+
+        .toc {
+            @extend .back-to-top;
+            margin: 0 2rem;
+        }
+    }
+}

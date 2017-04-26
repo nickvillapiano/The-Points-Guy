@@ -1,0 +1,104 @@
+// _ninety-second-tips.scss
+
+.ninety-second-tips {
+    background: $black;
+    padding: 4rem 0;
+
+    .ninety-second-tips-wrapper {
+        width: 100%;
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+
+    .section-header {
+
+        span {
+            color: $white;
+            background: $black;
+            font-size: 3rem;
+        }
+
+        &:before {
+            background: $white;
+        }
+
+        &:after {
+            background: $white;
+        }
+    }
+
+    .section-subheader {
+        color: $white;
+    }
+
+    .videos {
+        margin: 0 auto;
+        width: 10 * $colgut - $gut;
+
+        .ninety-sec-video {
+            width: calc(50% - 2.25rem);
+            margin: 0 2rem 0 0;
+            display: inline-block;
+
+            .video-wrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                svg {
+                    @include absolute-center;
+                    border: 0.2rem solid $white;
+                    border-radius: 50%;
+                    width: 8rem;
+
+                    .st0 {
+                        display: none;
+                    }
+
+                    .st1 {
+                        stroke: $white;
+                        stroke-width: 0.4rem;
+                        fill: none;
+                    }
+                }
+            }
+
+            .meta {
+                text-align: center;
+                width: 3 * $colgut;
+                margin: 0 auto;
+
+                .link {
+                    @include walsh-bold;
+                    font-size: 2.4rem;
+                    line-height: 1;
+                    color: $white;
+                    margin: 1.2rem 0 1.5rem;
+                }
+
+                .social-icons {
+                    @include ss-social;
+                    color: $white;
+                    font-size: 2.5rem;
+
+                    .twitter-icon {
+                        margin-right: 0.7rem;
+                    }
+
+                    .facebook-icon {
+                        margin-left: 0.7rem;
+                    }
+                }
+            }
+
+            & + .video {
+                margin: 0;
+            }
+        }
+    }
+}

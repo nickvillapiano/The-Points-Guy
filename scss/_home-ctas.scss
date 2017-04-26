@@ -1,0 +1,147 @@
+// _home-ctas.scss
+
+.home-ctas {
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .home-cta {
+        width: calc(100% / 3);
+        float: left;
+        position: relative;
+        min-height: 20.1rem;
+
+        .overlay {
+            min-height: 16.4rem;
+            background: linear-gradient(0deg, $black, transparent);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .home-cta-title {
+                cursor: pointer;
+                color: $green;
+
+                .byline {
+
+                    a, a:hover, a:active, a:visited, a:link {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .home-cta-title {
+            color: $white;
+            text-align: center;
+            @include walsh-bold;
+            font-size: 2rem;
+            line-height: 1.1667;
+            text-transform: uppercase;
+            @include absolute-center;
+            transition: all 0.2s;
+            width: calc(100% - 4rem);
+            max-width: 33rem;
+
+            .byline {
+                font-size: 1.6rem;
+                @include inline-vertical;
+                width: calc(100% - 5rem);
+                text-transform: none;
+
+                a, a:hover, a:active, a:visited, a:link {
+                    color: $white;
+                }
+            }
+
+            .home-cta-title-macro {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .share-icons {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 2.9rem;
+
+            .comments-icon {
+
+                svg {
+                    width: 2.4rem;
+                }
+            }
+
+            .counter {
+                top: -0.4rem;
+            }
+        }
+    }
+
+    #cta2 {
+        border-left: 0.1rem solid $black;
+        border-right: 0.1rem solid $black;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+
+    .home-ctas {
+
+        .home-cta {
+
+            .home-cta-title {
+                min-width: 18rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 710px) {
+
+    .home-ctas {
+
+        .home-cta {
+            width: 100%;
+            min-height: 11rem;
+
+            .home-cta-title {
+                border: none;
+                min-width: 50%;
+            }
+
+            .overlay {
+                min-height: 11rem;
+            }
+        }
+
+        #cta2 {
+            border: none;
+            border-top: 0.1rem solid $black;
+            border-bottom: 0.1rem solid $black;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .home-ctas {
+
+        .home-cta {
+
+            .overlay {
+            }
+
+            .home-cta-title {
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// _elements.scss
+
+.elements {
+
+    .content {
+        padding: 5rem 0;
+    }
+
+    .section-header {
+        margin-top: 5rem;
+        display: block;
+    }
+
+    .newsletter-control {
+
+        .control-label {
+            display: none;
+        }
+
+        .control-macro {
+
+            .control-micro {
+
+                .dot {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+}

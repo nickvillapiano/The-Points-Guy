@@ -1,0 +1,17 @@
+// _comments.scss
+
+#comments {
+    max-width: 82.3rem;
+    margin: 10rem 0;
+    min-height: 80rem;
+    background: $light-grey;
+    @include pressura-regular;
+    position: relative;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

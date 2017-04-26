@@ -1,0 +1,86 @@
+// _inline-img.scss
+
+.inline-img {
+    margin: 0 0 3rem;
+    position: relative;
+    overflow: auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    #gallery-icon {
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        z-index: 2;
+        width: 2.5rem;
+
+        .cls-1 {
+            fill: $royal;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+
+            .cls-1 {
+                fill: $black;
+            }
+        }
+    }
+}
+
+.caption-macro {
+    width: 100%;
+    overflow: auto;
+    padding: 0 0 0.5rem;
+
+    .caption {
+        @include walsh-light-oblique;
+        font-size: 1.8rem;
+        line-height: 1;
+        float: left;
+        width: 65%;
+    }
+
+    .photo-credit {
+        float: right;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: $light-grey;
+        width: 35%;
+        text-align: right;
+
+        #camera-icon {
+            width: 2rem;
+            vertical-align: middle;
+
+            .st0 {
+                fill: $light-grey;
+            }
+        }
+
+        span {
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+
+    .caption-macro {
+
+        .caption {
+            width: 100%;
+        }
+
+        .photo-credit {
+            width: 100%;
+            font-size: 1.2rem;
+            float: left;
+            text-align: left;
+            margin: 0.5rem 0;
+        }
+    }
+}

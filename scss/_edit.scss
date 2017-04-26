@@ -1,0 +1,51 @@
+// _edit.scss
+
+.edit {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $light-grey;
+    transition: color 0.2s;
+    @include inline-vertical;
+    vertical-align: sub;
+    margin: 0 0 0 1rem;
+
+    span {
+        text-decoration: underline;
+
+        span {
+            display: block;
+
+            & + span {
+                display: none;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $royal;
+        }
+    }
+
+    .divider {
+        display: inline-block;
+        margin: 0 0.5rem;
+        text-decoration: none;
+        color: $light-grey;
+    }
+
+    .save-cancel {
+        display: none;
+        color: $royal;
+    }
+
+    &.engaged {
+
+        .btn-edit {
+            display: none;
+        }
+
+        .save-cancel {
+            display: inline-block;
+        }
+    }
+}

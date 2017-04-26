@@ -1,0 +1,57 @@
+// _1110.scss
+
+@media only screen and (max-width: 1110px) {
+
+.article {
+
+}
+
+blockquote {
+
+    .quote {
+        padding: 0 $gut;
+    }
+}
+
+.card-pick {
+    width: calc(100% - #{2 * $gut});
+    margin: 0.9rem $gut $gut;
+    //
+    float: none;
+    max-width: 62rem;
+    margin: 0 auto 2rem;
+
+    &.left {
+    	margin: 0 auto 2rem;
+    }
+
+    &.right {
+    	margin: 0 auto 2rem;
+    }
+
+    .the-card {
+        text-align: left;
+    }
+}
+
+// .search {
+//     width: 2rem;
+
+//     .search-trigger {
+
+//         .search-icon {
+//             left: -2rem;
+
+//             .st1 {
+//                 fill: $white;
+//             }
+//         }
+
+//         input {
+//             opacity: 0;
+//             width: 0;
+//         }
+//     }
+// }
+
+}

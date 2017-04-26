@@ -1,0 +1,72 @@
+// _hub-50-50.scss
+
+.hub-50-50 {
+    background: $grey9;
+    padding: 5rem 0;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: $grey9;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        background: $grey9;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        z-index: -1;
+    }
+
+    .hub-50-50-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $content-width;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    section {
+        width: 50%;
+        padding: 0 2rem 0 0;
+        float: left;
+        background: url('../images/dashes-vert.png') top right repeat-y;
+
+        & + section {
+            background: none;
+            width: calc(50% - 2rem);
+            margin: 0 0 0 2rem;
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .hub-50-50 {
+
+        .hub-50-50-wrapper {
+            overflow: initial;
+        }
+
+        section {
+            width: 100%;
+            padding: 0 0 6rem;
+            background: url('../images/dashes.png') bottom center repeat-x;
+            float: none;
+
+            & + section {
+                width: 100%;
+                margin: 5rem 0 0;
+            }
+        }
+    }
+}

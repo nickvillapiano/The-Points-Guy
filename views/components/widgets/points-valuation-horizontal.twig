@@ -1,0 +1,133 @@
+<!-- Widget - Points Valuation horizontal -->
+
+{#
+    AR: CURRENT IMPLEMENTATION GOTCHAS [9/14]:
+    - Header isn't completely styled. Flex width items make left-aligh hard in mobile.
+    - Navs are missing svg arrows.
+    - JS needs throttle to prevent event hammer-breakage
+#}
+<div class="points-ticker {{class}}">
+    <div class="points-ticker-wrapper">
+        <div class="header">
+            <div class="title">
+                What are <br>Points Worth?
+            </div>
+            <div class="sub-title">
+                Our (highly subjective) monthly valuations
+            </div>
+        </div>
+        <div class="ticker-item-wrapper">
+            <article class="link value-up ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        Starwood
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">2.5</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        Chase Ultimate Rewards
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">2.1</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link value-down ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        American Express Membership Rewards
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.9</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        Citi Thank You
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.6</span>&cent;
+                    </div>
+                </div>
+            </article>
+            {# SECOND BANK #}
+            <article class="link value-down ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        Delta Skymiles
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.2</span>&cent;
+                    </div>
+                </div>
+            </article>
+
+            <article class="link ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        Citi Thank You
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.6</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link ticker-item value-up">
+                <div class="meta">
+                    <div class="meta-title">
+                        Delta Skymiles
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.2</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link ticker-item value-up">
+                <div class="meta">
+                    <div class="meta-title">
+                        American Express Membership Rewards
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">1.9</span>&cent;
+                    </div>
+                </div>
+            </article>
+            {#
+            <article class="link ticker-item">
+                <div class="meta">
+                    <div class="meta-title">
+                        9. Chase Ultimate Rewards
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">2.1</span>&cent;
+                    </div>
+                </div>
+            </article>
+            <article class="link ticker-item value-up">
+                <div class="meta">
+                    <div class="meta-title">
+                        10. Starwood
+                    </div>
+                    <div class="meta-description">
+                        <span class="number-animate">2.5</span>&cent;
+                    </div>
+                </div>
+            </article>
+            #}
+
+        {# END SECOND BANK #}
+            <div class="ticker-nav prev"><i></i></div>
+            <div class="ticker-nav next"><i></i></div>
+        </div>
+        <div class="see-all">
+            <a href="#">See all (July)</a>
+        </div>
+    </div>
+</div>

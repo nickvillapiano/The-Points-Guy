@@ -1,0 +1,23 @@
+<!-- Widgets block -->
+
+<section class="widgets-block">
+
+    <div class="widgets-block-wrapper">
+        {% include 'components/widgets/further-reading.twig' with
+            {
+                class: "inset left third"
+            }
+        %}
+        {% include 'components/widgets/further-viewing.twig' with
+            {
+                class: "inset center third"
+            }
+        %}
+        {% include 'components/widgets/the-latest.twig' with
+            {
+                class: "inset right third"
+            }
+        %}
+    </div>
+
+</section>

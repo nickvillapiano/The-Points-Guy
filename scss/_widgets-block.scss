@@ -1,0 +1,11 @@
+// _widgets-block.scss
+
+.widgets-block {
+    padding: 5rem 0;
+
+    .widgets-block-wrapper {
+        width: 100%;
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+}

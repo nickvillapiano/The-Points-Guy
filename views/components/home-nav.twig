@@ -1,0 +1,69 @@
+<!-- Home Nav -->
+
+<section class="home-nav">
+    <div class="x-close">
+        <svg version="1.1" id="x-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"/>
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"/>
+        </svg>
+    </div>
+    <div class="home-nav-wrapper">
+        <div class="logo">
+            <img src="images/tpg-logo-light.svg" alt="FPO altered logo">
+        </div>
+        <div class="tagline">
+            Maximize your travel.
+        </div>
+
+        <div class="dotted-hr">
+        </div>
+        <div class="main-nav">
+            <div class="search-trigger">
+                <span class="search-trigger-label">
+                    Search
+                </span>
+                <svg version="1.1" id="search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 222.3 232.6" style="enable-background:new 0 0 222.3 232.6;" xml:space="preserve">
+                    <path class="cls-1" d="M222.3,213.5L177,168.2c15.8-17.9,25.4-41.3,25.4-67C202.4,45.4,157,0,101.2,0S0,45.4,0,101.2C0,157,45.4,202.4,101.2,202.4
+                        c20.4,0,39.4-6.1,55.3-16.5l46.7,46.7L222.3,213.5z M27,101.2C27,60.3,60.3,27,101.2,27s74.2,33.3,74.2,74.2s-33.3,74.2-74.2,74.2
+                        S27,142.1,27,101.2z"/>
+                </svg>
+                <input type="" name="" placeholder="Search Cards, Rewards, Deals…">
+            </div>
+            <nav>
+                <a href="#">
+                    Deals
+                </a>
+                <a href="#">
+                    Reviews
+                </a>
+                <a href="#">
+                    Guides
+                </a>
+                <a href="#">
+                    News
+                </a>
+                <a href="#">
+                    Videos
+                </a>
+            </nav>
+        </div>
+        {% include 'components/login.twig' %}
+        {% include 'components/social-icons.twig' %}
+        {% include 'components/disclosure.twig' %}
+    </div>
+</section>
+
+<section class="mobile-nav">
+    <div class="logo">
+        <img src="images/tpg-logo-light.svg" alt="FPO altered logo">
+    </div>
+    <div class="menu">
+        <span>
+            Menu
+        </span>
+    </div>
+</section>
+
+{% include 'components/search.twig' %}
+
+{% include 'components/add-a-card.twig' %}

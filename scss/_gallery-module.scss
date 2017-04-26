@@ -1,0 +1,143 @@
+// _gallery-module.scss
+
+.gallery-module {
+    position: fixed;
+    background: $black;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: $white;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s, z-index 0.2s;
+
+    &.show {
+        opacity: 1;
+        z-index: 999;
+    }
+
+    #gallery-icon {
+        display: none;
+    }
+
+    .x-close {
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        z-index: 2;
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+                .cls-1 {
+                    fill: $green;
+                }
+            }
+        }
+
+        svg {
+            width: 2rem;
+
+            .cls-1 {
+                fill: $white;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    .gallery-module-wrapper {
+        @include absolute-center;
+    }
+
+    .inline-img {
+        margin: 0 auto;
+        width: 100vw;
+        padding: 0 15vw;
+    }
+
+    .gallery-header {
+        overflow: auto;
+        padding: 0 15vw;
+    }
+
+    .pagination {
+        float: left;
+        font-weight: bold;
+        font-size: 1.4rem;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .shares {
+        float: right;
+        @include ss-social;
+
+        .twitter-icon {
+            margin-right: 0.7rem;
+            transition: color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: $green;
+            }
+        }
+
+        .facebook-icon {
+            transition: color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: $green;
+            }
+        }
+    }
+
+    .arrows {
+        @include absolute-center;
+        z-index: 2;
+        width: calc( (100% - 30vw) + 10rem );
+
+        .arrow {
+            width: 4rem;
+            height: 4rem;
+            background: $navy;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .lt-gt {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-left: 0.2rem solid $white;
+                border-bottom: 0.2rem solid $white;
+                transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                margin: 0 0 0 0.2rem;
+                transition: border-color 0.3s;
+            }
+
+            &.left-arrow {
+                left: 0;
+            }
+
+            &.right-arrow {
+                right: -0.1rem;
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .lt-gt {
+                    border-color: $green;
+                }
+            }
+        }
+    }
+
+}

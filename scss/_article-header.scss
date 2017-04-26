@@ -1,0 +1,61 @@
+// _article-header.scss
+
+.article-header {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 4.3rem 0;
+    text-align: center;
+    color: $white;
+    background: url(../images/hawaii.jpg) center center no-repeat;
+    background-size: cover;
+
+    a, a:hover, a:active, a:visited, a:link {
+        color: $white;
+    }
+
+    .meta {
+        margin: 0.4rem 0 -0.5rem;
+        display: inline-block;
+        padding: 0 0 0 2rem;
+        vertical-align: middle;
+    }
+
+    .timestamp {
+        display: inline-block;
+        color: $white;
+    }
+
+    .title {
+        margin: 1.5rem auto 3rem;
+        text-shadow: 0.2rem 0.2rem 0.1rem $navy40;
+        transition: all 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        }
+    }
+
+    .byline {
+        @include walsh-bold;
+        font-size: 1.6rem;
+        display: inline-block;
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $royal;
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    .byline-photo {
+        width: 3rem;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

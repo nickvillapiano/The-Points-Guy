@@ -1,0 +1,73 @@
+<!-- Horizontal Articles / Viral -->
+
+<section class="horizontal-articles viral">
+    <div class="section-header">
+        <span>
+            Today's Most Viral Articles
+        </span>
+    </div>
+    <div class="horizontal-articles-wrapper">
+        <!-- 2/3 content -->
+        <div class="horizontal-articles-macro left">
+            <div class="articles">
+
+                {% include 'components/individual-article.twig' with
+                    {
+                        imgRaw: '<img class="thumbnail" src="images/quantas-thumb.jpg" alt="FPO">',
+                        label: 'Deals',
+                        title: 'What Are Points & Miles Worth? July Monthly Valuations',
+                        timestamp: 'July 10, 2016',
+                        shareCount: '420'
+                    }
+                %}
+
+                {% include 'components/individual-article.twig' with
+                    {
+                        imgRaw: '<img class="thumbnail" src="images/article-fpo10.jpg" alt="FPO">',
+                        label: 'Deals',
+                        title: 'Earn 100,000 Membership Rewards Points with this Amex Platinum Offer',
+                        timestamp: 'July 6, 2016',
+                        shareCount: '398'
+                    }
+                %}
+
+                {% include 'components/individual-article.twig' with
+                    {
+                        imgRaw: '<img class="thumbnail" src="images/article-fpo11.jpg" alt="FPO">',
+                        label: 'Guide',
+                        title: 'How to Book Etihad Partner Award Flights, and Why It’s Worth the Effort',
+                        timestamp: 'April 20th, 2016',
+                        shareCount: '609'
+                    }
+                %}
+
+                {% include 'components/individual-article.twig' with
+                    {
+                        imgRaw: '<img class="thumbnail" src="images/quantas-thumb.jpg" alt="FPO">',
+                        label: 'Valuation',
+                        title: 'What Are Points & Miles Worth? July Monthly Valuations',
+                        timestamp: 'Juuly 10th, 2016',
+                        shareCount: '271'
+                    }
+                %}
+
+                {% include 'components/individual-article.twig' with
+                    {
+                        imgRaw: '<img class="thumbnail" src="images/quantas-thumb.jpg" alt="FPO">',
+                        label: 'Deals',
+                        title: 'What Are Points & Miles Worth? July Monthly Valuations',
+                        timestamp: 'July 10, 2016',
+                        shareCount: '98'
+                    }
+                %}
+
+            </div>
+        </div>
+        <!-- 1/3 content -->
+        {% include 'components/widgets/how-far-can-you-fly.twig' with
+            {
+                class: "inset right on-homepage"
+            }
+        %}
+    </div>
+</section>

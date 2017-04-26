@@ -1,0 +1,67 @@
+// _advertiser-disclosure-body.scss
+
+.advertiser-disclosure-body {
+    position: fixed;
+    z-index: 9999;
+    background: $navy;
+    width: 5 * $colgut - $gut;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    color: $white;
+    padding: 7rem 3rem 3rem 3rem;
+    transform: translateX(100%);
+    transition: 0.3s;
+    //
+    overflow: scroll;
+
+    &.show {
+        transform: translateX(0);
+    }
+
+    div {
+        font-size: 2.4rem;
+        text-align: center;
+        border-bottom: 0.2rem solid $white;
+        @include walsh-bold;
+        margin: 0 0 2.5rem 0;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .x-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 2rem;
+
+        svg {
+
+            .cls-1 {
+                fill: $white;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+
+                .cls-1 {
+                    fill: $green;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .advertiser-disclosure-body {
+        width: 100%;
+        padding: 7rem 10vw 3rem;
+    }
+}

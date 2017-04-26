@@ -1,0 +1,34 @@
+// _1410.scss
+
+@media only screen and (max-width: 1410px) {
+
+.article {
+}
+
+.javascript {
+
+    .terms {
+        width: 100%;
+
+        .term {
+            text-align: center;
+            width: calc(33% - 3rem);
+
+            &:nth-of-type(3) {
+                margin-right: 0;
+                padding-right: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.sidebar {
+    margin-right: $gut;
+}
+
+}

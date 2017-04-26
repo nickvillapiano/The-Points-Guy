@@ -1,0 +1,34 @@
+//_tags.scss
+
+.tags {
+    @include walsh-light;
+    font-size: 1.4rem;
+    padding: 2.5rem $gut;
+    border-top: 0.1rem solid $lightest-grey;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    //
+    display: none;
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1.2rem 0;
+    }
+
+    .tag {
+        border: 0.2rem solid $royal;
+        padding: 1.5rem;
+        line-height: 0;
+        margin: 0 0.3rem;
+        color: $royal;
+        transition: color 0.3s, background 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $white;
+            background: $royal;
+        }
+    }
+}

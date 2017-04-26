@@ -1,0 +1,234 @@
+// _guide-subheader.scss
+
+.guide-subheader {
+    max-width: 13 * $colgut + $gut;
+    background: $white;
+    margin: -17rem auto 7rem;
+    position: relative;
+    padding: 2.6rem 0 10rem;
+}
+
+.guide-title {
+    position: relative;
+    margin: 0 0 0.6rem;
+    text-align: left;
+
+    span {
+        @include walsh-bold;
+        font-size: 1.8rem;
+        background: $white;
+        padding: 0 0.8rem 0 1rem;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        //
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background: $navy;
+        top: 1rem;
+        left: 0;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background: $navy;
+        top: 1.3rem;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.guide-steps {
+    padding: 0 0 0 $colgut;
+
+    ol {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            text-align: left;
+            position: relative;
+            padding: 0 3.5rem 0 0;
+            margin: 0 0 0 3.1rem;
+
+            a, a:hover, a:active, a:visited, a:link {
+                position: relative;
+                z-index: 2;
+                @include walsh-bold;
+                font-size: 2.4rem;
+                line-height: 1;
+                margin: 0 0 0 3.3rem;
+                @include inline-vertical;
+                color: $black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $royal;
+            }
+
+            &:before {
+                content: "1";
+                position: absolute;
+                @include pressura-regular;
+                font-weight: bold;
+                font-size: 2.4rem;
+                color: $navy;
+                width: 4rem;
+                height: 4rem;
+                background: $green;
+                border-radius: 50%;
+                text-align: center;
+                z-index: 1;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                padding: 0.2rem 0 0 0;
+            }
+
+            &:nth-of-type(1) {
+                margin: 0;
+            }
+
+            &:nth-of-type(2) {
+
+                &:before {
+                    content: "2";
+                }
+            }
+
+            &:nth-of-type(3) {
+
+                &:before {
+                    content: "3";
+                }
+            }
+
+            &:nth-of-type(4) {
+
+                &:before {
+                    content: "4";
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 4rem;
+                width: 0.1rem;
+                background: $border-grey;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+            }
+
+            &:last-of-type {
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1210px) {
+
+    .guide-steps {
+        padding: 0;
+
+        ol {
+            text-align: center;
+
+            li {
+                padding: 0 2.5rem 0 0;
+                margin: 0 0 0 2.1rem;
+
+                a, a:hover, a:active, a:visited, a:link {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+
+    .guide-steps {
+        margin: 0 auto;
+        position: relative;
+        left: 3.5rem;
+        max-width: calc(8 * #{$colgut} - #{$gut});
+        width: calc(100% - 2 * #{$gut});
+        margin: 7rem auto 0;
+        transition: left 0.3s;
+
+        ol {
+
+            li {
+                width: calc(50% - 0.4rem);
+                padding: 0;
+                margin: 0 0 4rem;
+
+                &:after {
+                    display: none;
+                }
+
+                a, a:hover, a:active, a:visited, a:link {
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .guide-steps {
+        left: 1.5rem;
+    }
+
+    .guide-subheader {
+        padding-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .guide-steps {
+        width: 50%;
+        left: 0;
+
+        ol {
+            text-align: center;
+
+            li {
+                width: 100%;
+                display: inline-block;
+                clear: both;
+
+
+                &:nth-of-type(1) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+}

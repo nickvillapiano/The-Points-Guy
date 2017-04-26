@@ -1,0 +1,38 @@
+// _social-icons.scss
+
+.social-icons {
+    @include ss-social;
+    font-size: 2.5rem;
+    color: $white;
+
+    a, a:hover, a:active, a:visited, a:link {
+        margin: 0 1rem 0 0;
+        transition: color 0.2s;
+        text-decoration: none;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+
+    a:hover {
+        color: $green;
+    }
+
+    svg {
+        width: 2.5rem;
+
+        .cls-1 {
+            fill: $white;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .cls-1 {
+                fill: $green;
+            }
+        }
+    }
+}

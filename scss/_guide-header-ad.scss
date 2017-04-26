@@ -1,0 +1,19 @@
+// _guide-header-ad.scss
+
+.guide-header-ad {
+    margin: 0 0 4.6rem;
+    //
+    display: none;
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.4rem;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 3rem;
+    }
+}

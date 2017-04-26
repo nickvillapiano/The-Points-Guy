@@ -1,0 +1,20 @@
+<!-- Video article content -->
+
+{% if isNoHero %}
+
+{% else %}
+    {% include 'components/video.twig' with
+        {
+            url: 'https://player.vimeo.com/video/156212670'
+        }
+    %}
+{% endif %}
+
+<section class="article-content">
+    <div class="article-wrapper">
+        {% include "components/video-article-header.twig" %}
+        {% include "components/video-article-body-content.twig" %}
+    </div>
+</section>
+{% include "components/sidebar-video.twig" %}
+

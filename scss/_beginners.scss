@@ -1,0 +1,15 @@
+// _beginners.scss
+
+.beginners {
+
+    .home-ctas {
+        z-index: 2;
+    }
+
+    .editorial-disclosure {
+        position: relative;
+        z-index: 1;
+        margin: -13rem auto 11rem;
+        max-width: 97rem;
+    }
+}

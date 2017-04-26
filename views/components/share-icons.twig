@@ -1,0 +1,51 @@
+<!-- Share Icons -->
+
+<div class="share-icons {{class}}">
+
+    {% if isOnlyComments %}
+        <span class="comments-icon">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                <title>comment-icon</title>
+                <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+            </svg>
+            <span class="counter">
+                12
+            </span>
+        </span>
+    {% elseif isArticleFooter %}
+        <div class="share-label">
+            Share this post
+        </div>
+        <span class="twitter-icon">
+            <span class="icon">&#62993;</span>
+        </span>
+        <span class="facebook-icon">
+            <span class="icon">&#62992;</span>
+        </span>
+        <span class="link-icon">
+            <span class="icon">
+                link
+            </span>
+        </span>
+    {% else %}
+        <span class="twitter-icon">
+            &#62993;
+        </span>
+        <span class="facebook-icon">
+            &#62992;
+            <span class="counter">
+                398
+            </span>
+        </span>
+        <span class="comments-icon">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+                <title>comment-icon</title>
+                <path class="cls-1" d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"/>
+            </svg>
+            <span class="counter">
+                12
+            </span>
+        </span>
+    {% endif %}
+
+</div>

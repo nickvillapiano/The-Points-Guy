@@ -1,0 +1,29 @@
+// _card-pick-notification.scss
+
+.card-pick-notification {
+    width: 100%;
+    position: absolute;
+    top: 2.8rem;
+    z-index: 2;
+    color: $navy;
+    background: $green;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    svg {
+        width: 1rem;
+        @include inline-vertical;
+        transform: rotate(-90deg);
+
+        .cls-1 {
+            fill: $navy;
+        }
+    }
+
+    span {
+        @include inline-vertical;
+        margin: 0 0 0 1rem;
+    }
+}

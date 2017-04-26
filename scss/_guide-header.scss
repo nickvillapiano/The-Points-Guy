@@ -1,0 +1,100 @@
+// _guide-header.scss
+
+.guide-header {
+    height: calc(100vh - 10rem);
+    position: relative;
+    //
+    // height: calc(100vh - 33rem);
+
+    .guide-header-title {
+        color: $white;
+        max-width: 99rem;
+        margin: 0 auto;
+        @include walsh-bold;
+        text-transform: uppercase;
+        line-height: 0.869;
+        font-size: calc(5vw + 3.5rem);
+    }
+
+    .guide-header-macro {
+        margin: 0 auto;
+        padding: 5vh 0 0;
+        text-align: center;
+        position: relative;
+        top: calc(50% - 9rem);
+        transform: translateY(-50%);
+
+        #compass-icon {
+            margin: -4rem 0 1rem;
+            width: 4rem;
+            //
+            display: none;
+
+            .st0 {
+                fill: $green;
+            }
+        }
+    }
+
+    .intro-line {
+        @include walsh-light;
+        font-size: 1.8rem;
+        margin: 0 auto 4.5rem;
+        max-width: 30rem;
+    }
+
+    .meta {
+        text-align: center;
+        color: $white;
+        margin: 4rem 0 5rem 0;
+    }
+}
+
+@media only screen and (max-height: 960px) {
+
+    .guide-header {
+
+        .guide-header-title {
+        }
+
+        .guide-header-macro {
+            padding: 3vh 0 0;
+
+            #compass-icon {
+                margin: 0 0 -1rem;
+            }
+        }
+
+        .intro-line {
+            max-width: calc(100% - 4rem);
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            margin: 3.3rem 0 0rem 0;
+        }
+
+        .guide-header-ad {
+            margin: 0 0 1.5rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 720px) {
+
+    .guide-header {
+        background: url(../images/bg-beginners-2.jpg) center top no-repeat;
+        background-size: 200%;
+
+        .guide-header-macro {
+
+            #compass-icon {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .guide-header-title {
+        }
+    }
+}

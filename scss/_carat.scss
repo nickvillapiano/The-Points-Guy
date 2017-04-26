@@ -1,0 +1,20 @@
+// _carat.scss
+
+.carat {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-right: 0.2rem solid $navy;
+    border-bottom: 0.2rem solid $navy;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin: 0 0 0 2rem;
+    transition: all 0.2s;
+
+    &.engaged {
+        transform: rotate(-45deg) rotateX(180deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

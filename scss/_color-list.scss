@@ -1,0 +1,76 @@
+// _color-list.scss
+
+.color-list {
+    overflow: auto;
+
+    li {
+        list-style: none;
+
+    }
+
+    .main-colors {
+        margin: 0 0 5rem;
+
+        ul {
+            width: 100%;
+            overflow: auto;
+        }
+
+        li {
+            width: 20%;
+            float: left;
+        	text-align: center;
+        	font-size: 1.4rem;
+        	@include walsh-bold;
+
+            div {
+            	width: 80%;
+            	height: 0;
+                padding-bottom: 80%;
+                margin: 0 auto 2rem;
+            }
+
+            &.royal {
+            	color: $royal;
+
+            	div {
+            		background: $royal;
+            	}
+            }
+
+            &.navy {
+            	color: $navy;
+
+            	div {
+            		background: $navy;
+            	}
+            }
+
+            &.green {
+            	color: $green;
+
+            	div {
+            		background: $green;
+            	}
+            }
+
+            &.black {
+            	color: $black;
+
+            	div {
+            		background: $black;
+            	}
+            }
+
+            &.white {
+            	color: $white;
+            	text-shadow: 0 0 0.2rem $black;
+
+            	div {
+            		background: $white;
+            		border: 0.1rem solid $black;
+            	}
+            }
+        }
+    }
+}

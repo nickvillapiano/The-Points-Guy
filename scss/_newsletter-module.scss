@@ -1,0 +1,71 @@
+// _newsletter-module.scss 
+
+.newsletter-module {
+	color: $navy;
+	background: $green;
+	padding: 5rem;
+
+	.header {
+		@include pressura-bold;
+		font-size: 4.8rem;
+		line-height: 1;
+		text-align: center;
+
+		svg {
+			width: 5rem;
+			display: inline-block;
+
+			.cls-1 {
+				stroke: $navy; 
+				stroke-width: 4; 
+				stroke-miterlimit: 10;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		&:after {
+			content: "";
+			width: 10%;
+			min-width: 13rem;
+			height: 0.1rem;
+			background: $navy;
+			margin: 3rem auto;
+			display: block;
+		}
+	}
+
+	.sub-header {
+		text-align: center;
+		width: calc(100% - 4rem);
+		max-width: 35rem;
+		margin: 0 auto 2rem;
+	}
+
+	.newsletter-input {
+		margin: 0 auto;
+		text-align: center;
+
+		input {
+			border: none;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		button {
+			border: none;
+			@include walsh-bold;
+			font-size: 1.4rem;
+			text-decoration: underline;
+			color: $white;
+			background: $navy;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1;
+			margin: 0 0 0 -0.5rem;
+			padding: 1.3rem;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+// _guide-content.scss
+
+@import "guide-subheader";
+
+.guide-wrapper {
+}
+
+.guide-content {
+    background: $white;
+    min-height: 100vh;
+    margin: -17rem auto 0; // 17rem = Guide Content Nav
+    position: relative;
+    padding: 3rem 0 0 0;
+    text-align: center;
+    width: calc(100% - 2 * #{$gut});
+    max-width: calc(9 * #{$colgut} - #{$gut});
+}
+
+.guide-preamble {
+    text-align: center;
+    @include walsh-medium;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: calc(100% - 2 * #{$gut});
+    max-width: calc(9 * #{$colgut} - #{$gut});
+    margin: 7.1rem auto 0;
+}
+
+h1 {
+
+    &.step-title {
+        width: 100%;
+        text-align: center;
+        margin: 17.4rem auto 0;
+        position: relative;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            @include pressura-regular;
+            font-size: 4.8rem;
+            font-weight: bold;
+            position: absolute;
+            top: -8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            background: $green;
+            width: 11.5rem;
+            height: 11.5rem;
+            border-radius: 50%;
+            padding: 3.2rem 0 0 0;
+            color: $navy;
+        }
+    }
+}
+
+// NV: Card Pick button alignment fix
+.guide {
+
+    .card-pick {
+
+        .actionables {
+
+            .apply {
+                left: initial;
+                transform: none;
+            }
+        }
+    }
+}
+
+
+//nv: hack to show only 3 related articles
+.guide {
+
+    .related-links {
+
+        .related-link {
+
+            &:nth-of-type(5) {
+                display: none;
+            }
+
+            &:nth-of-type(6) {
+                display: none;
+            }
+        }
+    }
+}

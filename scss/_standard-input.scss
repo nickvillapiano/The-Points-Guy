@@ -1,0 +1,17 @@
+// _standard-input.scss
+
+.standard-input {
+    background: $grey9;
+    border: 0.2rem solid transparent;
+    transition: all 0.2s;
+
+    &:focus {
+        border: 0.2rem solid $green;
+        outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $lightest-grey;
+        @include walsh-light-oblique;
+    }
+}

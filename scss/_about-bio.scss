@@ -1,0 +1,9 @@
+// _about-bio.scss
+
+.about-bio {
+    width: calc(100% - 4rem);
+    max-width: 9 * $colgut - $gut;
+    margin: 0 auto;
+    line-height: 2;
+    text-align: center;
+}

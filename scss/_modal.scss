@@ -1,0 +1,88 @@
+// _modal.scss
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+
+    from {
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0) scale(.9);
+    }
+}
+
+.modal {
+    position: fixed;
+    color: $white;
+    z-index: 999;
+    animation: .2s ease-out fadeIn;
+    top: 0; right: 0; bottom: 0; left: 0;
+    img {
+        display: block;
+    }
+}
+
+.modal-overlay {
+    position: absolute;
+    background: $grey9;
+    opacity: 0.98;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    animation: .2s ease-out .1s both popIn;
+}
+
+.modal-core {
+    background: $white;
+    color: $black;
+
+    img {
+        max-width: 43rem;
+    }
+}
+
+// borrowed from gallery-module.scss
+.modal-close {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    z-index: 2;
+    //
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+
+        svg {
+            .cls-1 {
+                fill: $green;
+            }
+        }
+    }
+
+    svg {
+        width: 2rem;
+
+        .cls-1 {
+            fill: $navy;
+            transition: all 0.3s;
+        }
+    }
+}
+

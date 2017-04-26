@@ -1,0 +1,19 @@
+// _video-article-header.scss
+
+.article-header {
+    color: $black;
+    width: 100%;
+    text-align: left;
+
+    .title {
+        text-shadow: none;
+    }
+
+    .timestamp {
+        color: $black;
+    }
+
+    .meta {
+        color: $black;
+    }
+}

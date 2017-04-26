@@ -1,0 +1,81 @@
+// _720.scss
+
+@media only screen and (max-width: 600px) {
+
+html, body {
+    overflow-x: hidden;
+}
+
+.article-header {
+    padding: 10vh 2rem;
+
+    .timestamp {
+        border-right: none;
+    }
+
+    .meta {
+        display: block;
+        // AR-MOBILE: Adjusting position
+        margin: 2.4rem 0 0;
+        padding: 0;
+    }
+}
+
+.article-intro {
+    padding: 0 0 0 4rem;
+}
+
+.javascript {
+
+    .title {
+        font-size: 1.6rem;
+        margin: 0 0 0 -3rem;
+    }
+
+    .header {
+        line-height: 1.2;
+    }
+
+    .sub-header {
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .summary-wrapper {
+
+        .summary {
+            width: 100%;
+        }
+
+        .card-img {
+            width: 100%;
+            text-align: center;
+            margin: 4rem 0;
+        }
+    }
+
+    .apply {
+        margin: 2rem auto;
+        position: relative;
+    }
+
+    .i-have-this-card {
+        position: relative;
+        margin: 0;
+    }
+
+    .terms {
+
+        .term {
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+}

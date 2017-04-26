@@ -1,0 +1,42 @@
+<!-- Featured Posts -->
+
+<section class="featured-posts">
+    <div class="section-header">
+        <span>
+            {% if isHubTag %}
+                Top Posts
+            {% else %}
+                Featured Articles
+            {% endif %}
+
+        </span>
+    </div>
+
+    <div class="featured-posts-wrapper">
+        <div class="article">
+            <img class="deals-module-image" src="images/related2.jpg" alt="Deal FPO">
+            <div class="label">
+            	Review
+            </div>
+            <a href="#">New York to Amsterdam from $293 Round-trip</a>
+            <div class="timestamp">
+            	5 days ago
+            </div>
+        </div>
+        <div class="article">
+            <img class="deals-module-image" src="images/related4.jpg" alt="Deal FPO">
+            <div class="label">
+            	Guide
+            </div>
+            <a href="#">New York to Amsterdam from $293 Round-trip</a>
+            <div class="timestamp">
+            	5 days ago
+            </div>
+        </div>
+        {% if isDeals %}
+            <div class="more-link">
+                <a href="#">All Deals</a>
+            </div>
+        {% endif %}
+    </div>
+</section>

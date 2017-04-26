@@ -1,0 +1,118 @@
+// _current-offer-bar.scss
+
+.current-offer-bar {
+    padding: 2rem 0 1rem;
+    background: $grey9;
+
+    .current-offer-bar-wrapper {
+        overflow: hidden;
+        max-width: $content-width;
+        margin: 0 auto;
+        width: calc(100% - 4rem);
+    }
+
+    .current-offer {
+        width: 50%;
+        float: left;
+
+        .header {
+            @include walsh-bold;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .offer {
+            font-size: 3rem;
+            color: $royal;
+
+            span {
+                @include walsh-light-oblique;
+                display: inline-block;
+                margin: 0 0 0 1rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .card-actions {
+        width: 50%;
+        float: right;
+        text-align: right;
+
+        .i-have-this-card {
+            display: inline-block;
+            margin-right: 1rem;
+
+            &.checked {
+
+                & + .button {
+                    max-width: 0;
+                    padding: 0.6rem 0 0.8rem;
+                }
+            }
+        }
+
+        .apply {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            white-space: nowrap;
+            transition: all 0.3s;
+            max-width: 20rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+
+    .current-offer-bar {
+
+        .current-offer {
+
+            .offer {
+
+                span {
+                    display: block;
+                    margin: 0;
+                }
+            }
+        }
+
+        .card-actions {
+            margin: 1rem 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .current-offer-bar {
+
+        .current-offer {
+            width: 100%;
+            float: none;
+            margin: 1rem auto 0;
+            text-align: center;
+        }
+
+        .card-actions {
+            width: calc(100% - 4rem);
+            text-align: center;
+            float: none;
+            margin: 2rem auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .current-offer-bar {
+
+        .card-actions {
+
+            .apply {
+                margin: 1rem 0 0;
+            }
+        }
+    }
+}

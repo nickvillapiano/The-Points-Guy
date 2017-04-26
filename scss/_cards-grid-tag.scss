@@ -1,0 +1,219 @@
+// _cards-grid-tag.scss
+
+.cards-grid-tag {
+    margin: 5rem 0;
+
+    .cards-grid-tag-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+
+    .cards-grid {
+        text-align: center;
+    }
+
+    .individual-card {
+        width: calc(33.333% - 1.5rem);
+        display: inline-block;
+        vertical-align: top;
+        padding: 3rem;
+        background: $grey9;
+        margin: 1rem 0.5rem 0 0;
+        transition: all 0.3s;
+
+        &:nth-of-type(3n + 3) {
+            margin: 1rem 0 0 0;
+        }
+
+        &:last-of-type {
+            margin: 1rem 0 0 0;
+        }
+    }
+
+    .card-img {
+        max-width: 25rem;
+        position: relative;
+        margin: 3rem auto;
+        position: relative;
+        transition: all 0.3s;
+
+        &:after {
+            content: "";
+            @include absolute-center;
+            background: $lightest-grey;
+            width: 21rem;
+            height: 21rem;
+            z-index: 1;
+            border-radius: 50%;
+            margin: -0.3rem 0 0 0;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+
+            .shadow-layer {
+                box-shadow: 0rem 1rem 4rem $black90;
+            }
+
+            &:after {
+                width: 19rem;
+                height: 19rem;
+            }
+        }
+
+        img {
+            position: relative;
+            z-index: 3;
+        }
+
+        .shadow-layer {
+            @include absolute-center;
+            width: 90%;
+            height: 80%;
+            box-shadow: 0 0 0 transparent;
+            transition: all 0.3s;
+            z-index: 2;
+        }
+    }
+
+    .meta {
+        width: calc(100% - 4rem);
+        max-width: 25rem;
+        margin: 0 auto;
+
+        .card-title {
+            @include walsh-bold;
+            font-size: 2.4rem;
+            line-height: 1;
+            margin: 6.4rem 0 1.7rem 0;
+            transition: all 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: $royal;
+            }
+        }
+
+        .offer-title {
+            @include walsh-bold;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .offer {
+            @include walsh-light;
+            font-size: 3rem;
+            color: $navy;
+            margin: -0.2rem 0 1.6rem 0;
+        }
+
+        .i-have-this-card {
+        }
+    }
+
+    .badges {
+        margin: 0 0 2.3rem;
+        text-align: center;
+
+        .badge {
+            background: $green;
+            display: inline-block;
+            vertical-align: middle;
+            color: $green;
+            width: 11.5rem;
+            height: 4rem;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+                background: $navy;
+
+                svg {
+
+                    .cls-1 {
+                        fill: $green;
+                    }
+                }
+
+                span {
+                    color: $green;
+                }
+            }
+
+            .badge-meta {
+                @include absolute-center;
+                width: 100%;
+            }
+
+            svg {
+                width: 2.5rem;
+                @include inline-vertical;
+
+                .cls-1 {
+                    fill: navy;
+                    transition: all 0.3s;
+                }
+            }
+
+            span {
+                @include inline-vertical;
+                @include walsh-bold;
+                font-size: 1.4rem;
+                color: $navy;
+                transition: color 0.3s;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+
+    .cards-grid-tag {
+
+        .individual-card {
+            width: calc(50% - 1.5rem);
+
+            &:nth-of-type(odd) {
+                margin: 2rem 0.5rem 0 0;
+            }
+
+            &:nth-of-type(even) {
+                margin: 2rem 0 0 0.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cards-grid-tag {
+
+        .card-img {
+            max-width: 18rem;
+
+            &:after {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+        .individual-card {
+            padding: 3rem 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .cards-grid-tag {
+
+        .individual-card {
+            width: 100%;
+            max-width: 50rem;
+            margin: 2rem 0 0;
+        }
+    }
+}

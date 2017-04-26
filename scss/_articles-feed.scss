@@ -1,0 +1,89 @@
+// _articles-feed.scss
+
+.articles-feed {
+	margin: 5rem 0 0;
+	padding-bottom: 5rem;
+
+	.articles-feed-wrapper {
+		width: calc(100% - 4rem);
+		max-width: $content-width;
+		margin: 0 auto;
+	}
+
+	.related-link {
+		margin: 0 0 2rem 0;
+		padding: 0 0 2rem 0;
+		border-bottom: 0.1rem solid $border-grey;
+
+		img {
+			max-width: 16rem;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 2rem 0 0;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.meta {
+			display: inline-block;
+			vertical-align: top;
+			width: calc(100% - 33rem);
+			transition: color 0.3s;
+
+			.title {
+				font-size: 2.4rem;
+
+				&:hover {
+					cursor: pointer;
+					color: $royal;
+				}
+			}
+
+			.label {
+				margin: 0 0 0.6rem;
+				padding: 0;
+				line-height: 1;
+			}
+
+			.timestamp {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+		}
+
+		.comment-count {
+			@include inline-vertical;
+		}
+
+		&:last-of-type {
+			border: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 660px) {
+
+	.articles-feed {
+
+		.related-link {
+			text-align: center;
+
+			img {
+			    width: calc(100% - 4rem);
+			    max-width: 50rem;
+			    margin: 2rem auto;
+			}
+
+			.meta {
+				width: 100%;
+			}
+
+			.comments-icon {
+				margin: 2rem 0;
+			}
+		}
+	}
+}

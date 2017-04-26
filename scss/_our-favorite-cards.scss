@@ -1,0 +1,324 @@
+// _our-favorite-cards.scss
+
+&.our-favorite-cards {
+
+    .card-img-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        display: inline-block;
+        vertical-align: middle;
+        width: 7.1rem;
+        margin: 0;
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 2;
+            margin: 0.5rem 0 0 0;
+        }
+
+        &:before {
+            content: "";
+            @include absolute-center;
+            background: $lightest-grey;
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+
+    .link {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        .meta {
+            transition: color 0.3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .meta {
+                color: $royal;
+            }
+        }
+
+        .more-link {
+            height: 5.5rem;
+            position: relative;
+            top: 1.2rem;
+
+            a, a:hover, a:active, a:visited, a:link {
+                @include walsh-light;
+                text-decoration: underline;
+                color: $royal;
+                font-size: 1.4rem;
+            }
+
+            &:after {
+                border-right: 0.1rem solid $royal;
+                border-bottom: 0.1rem solid $royal;
+            }
+        }
+    }
+
+    &.our-favorite-cards-horizontal {
+        margin: 0;
+        padding: 2rem;
+
+        .our-favorite-cards-horizontal-wrapper {
+            width: 100%;
+            max-width: $content-width;
+            margin: 0 auto;
+            border-left: 0.4rem solid $navy;
+            padding-left: 1rem;
+        }
+
+        .meta {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        .arrow-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 2rem 0 1rem;
+
+            svg {
+                width: 1rem;
+                transform: rotate(-90deg);
+
+                .cls-1 {
+                    fill: $green;
+                }
+            }
+
+            & + .link {
+                padding: 0;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                border-left: 0.1rem solid $white25;
+            }
+        }
+
+        .title {
+            border: none;
+            color: $navy;
+            font-size: 1.9rem;
+            margin: 0 2rem 0 0;
+            padding: 0;
+            @include pressura-bold;
+        }
+
+        .timestamp {
+            @include walsh-light-oblique;
+            color: $black;
+            margin: 0;
+            padding: 0;
+            top: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .link {
+            display: inline-block;
+            vertical-align: middle;
+            border-bottom: none;
+            border-left: 0.1rem solid $border-grey;
+            padding: 0 0.5rem 0 1rem;
+            margin: 0;
+
+            .meta {
+                text-align: left;
+
+                .meta-title {
+                    font-size: 1.4rem;
+                }
+
+                .meta-description {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &:last-of-type {
+                border-right: 0.1rem solid transparent;
+                border-left: none;
+            }
+
+            &:hover {
+
+                .meta {
+                    color: $royal;
+                }
+            }
+        }
+    }
+
+    &.dark {
+        color: $black;
+        background: $grey9;
+        border-bottom: 0.1rem solid $border-grey;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+
+    &.our-favorite-cards {
+
+        &.our-favorite-cards-horizontal {
+
+            .link {
+
+                &:nth-of-type(6) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    &.our-favorite-cards {
+
+        &.our-favorite-cards-horizontal {
+
+            .card-img-wrapper {
+                width: 6rem;
+
+                &:before {
+                    width: 5.5rem;
+                    height: 5.5rem;
+                }
+            }
+
+            .link {
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 990px) {
+
+    &.our-favorite-cards {
+
+        &.our-favorite-cards-horizontal {
+
+            .link {
+
+                &:nth-of-type(5) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 940px) {
+
+    &.our-favorite-cards {
+
+        &.dark {
+            border: none;
+        }
+
+        &.our-favorite-cards-horizontal {
+
+            .our-favorite-cards-horizontal-wrapper {
+                max-width: 34rem;
+                border: none;
+                margin-top: 6rem;
+                //
+                background: white;
+                padding: 3rem 2rem 0.1rem;
+                margin: 3rem auto;
+                max-width: calc(100% - 4rem);
+                overflow: auto;
+                padding-right: 0;
+                padding-bottom: 1rem;
+            }
+
+            .meta {
+                float: left;
+                margin-bottom: 2rem;
+
+                & + .link {
+                    clear: both;
+                }
+            }
+
+            .title {
+                font-size: 2.4rem;
+                padding: 0.8rem 0.5rem 0.4rem 0;
+                margin: -0.9rem 0 1rem;
+                border: 1rem solid $navy;
+                border-left: none;
+            }
+
+            .timestamp {
+                @include walsh-light;
+                margin: 0 0 1rem;
+                padding: 0;
+
+                &:before {
+                    content: "***";
+                    color: $green;
+                    display: inline-block;
+                }
+            }
+
+
+
+            .link {
+                display: block;
+                margin: 0 0 1.5rem;
+                padding: 0 0 1.5rem;
+                border: none;
+                border-bottom: 0.1rem solid $border-grey;
+                //
+                width: calc(50% - 2rem);
+                float: left;
+                margin-right: 2rem;
+
+                .meta {
+                    float: none;
+                    margin: 0 0 0 0.5rem;
+                }
+
+                &:nth-of-type(5) {
+                    display: block !important;
+                }
+
+                &:nth-of-type(6) {
+                    display: block;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    &.our-favorite-cards {
+
+        &.our-favorite-cards-horizontal {
+
+            .our-favorite-cards-horizontal-wrapper {
+                padding-right: 1.5rem;
+                padding-bottom: 0;
+            }
+
+            .link {
+                width: 100%;
+                margin: 0 0 2rem;
+            }
+        }
+    }
+}

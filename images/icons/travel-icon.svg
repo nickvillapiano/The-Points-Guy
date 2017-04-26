@@ -1,0 +1,8 @@
+<svg version="1.1" id="travel-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 90 77.8" style="enable-background:new 0 0 90 77.8;" xml:space="preserve">
+    <g>
+    	<path class="cls-1" d="M11.8,12.6H8.7c-4.8,0-8.7,3.9-8.7,8.7v1.6v2.8v43.5c0,4.8,3.9,8.7,8.7,8.7h3.1V12.6z"/>
+    	<path class="cls-1" d="M81.3,12.6h-3.1v65.2h3.1c4.8,0,8.7-3.9,8.7-8.7V25.6v-2.8v-1.6C90,16.5,86.1,12.6,81.3,12.6z"/>
+    	<path class="cls-1" d="M15.9,77.8h58.2V12.6H63V4.4C63,1.9,61.1,0,58.7,0H29.6c-2.4,0-4.3,1.9-4.3,4.4v8.2h-9.3L15.9,77.8L15.9,77.8z M28.5,4.4
+    		c0-0.6,0.5-1.1,1.1-1.1h29.1c0.6,0,1.1,0.5,1.1,1.1v8.2H28.5V4.4z"/>
+    </g>
+</svg>

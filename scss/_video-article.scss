@@ -1,0 +1,65 @@
+// _video-article.scss
+
+.video-article {
+
+    @import "video-article-header";
+
+    .article-header {
+        padding-top: 0;
+        margin-top: 1.5rem;
+        background: none;
+
+        .label {
+            margin-left: $gut;
+            @media only screen and (max-width: 600px) {
+                // AR-MOBILE: Adjusting margin
+                margin-left: -2rem;
+            }
+        }
+
+        .title {
+            margin-left: 2 * $gut;
+
+            &:hover {
+                color: $royal;
+            }
+        }
+
+        .byline {
+            margin-left: 4rem;
+
+            // AR-MOBILE: Adjusting margin here indstead of _600.scss
+            @media only screen and (max-width: 600px) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .sidebar {
+        margin-top: 4.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .share-icons {
+        margin-top: -0.8rem;
+
+        .twitter-icon {
+            color: $twitter;
+            line-height: 1.45;
+        }
+
+        .facebook-icon {
+            color: $facebook;
+        }
+
+        .comments-icon {
+
+            svg {
+
+                .cls-1 {
+                    fill: $light-grey;
+                }
+            }
+        }
+    }
+}

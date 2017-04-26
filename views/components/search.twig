@@ -1,0 +1,54 @@
+<!-- Search -->
+
+<div class="search">
+    <div class="search-wrapper">
+        <div class="x-close-container">
+            <div class="x-close">
+                <svg version="1.1" id="x-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+                    <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"/>
+                    <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"/>
+                </svg>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="" name="" placeholder="Search Cards, Rewards, Deals…">
+        </div>
+        <div class="search-state one hide-opacity remove">
+            <section class="search-trending-topics">
+                <div class="section-header small">
+                    Trending Topics
+                </div>
+                <div class="suggestions-block">
+                    <a href="#">
+                        Chase Sapphire Reserve
+                    </a>
+                    <a href="#">
+                        TPG Guide to Choosing a Card
+                    </a>
+                    <a href="#">
+                        Delta Skymiles
+                    </a>
+                </div>
+            </section>
+            <div class="section-header small">
+                Top Cards Today
+            </div>
+            <div class="related-posts">
+                {% include 'components/search-step-1.twig' %}
+                {# {% include 'components/horizontal-articles.twig' with
+                    {
+                        isSearchState1: true
+                    }
+                %} #}
+            </div>
+        </div>
+        <div class="search-state two hide-opacity remove">
+            {% include 'components/search-step-2.twig' %}
+            {# <img src="images/search/suggestions_v02.png" alt="Search State 2 FPO"> #}
+        </div>
+        <div class="search-state three hide-opacity remove">
+            {% include 'components/search-step-3.twig' %}
+            {# <img src="images/search/search-results-v02.png" alt="Search State 3 FPO"> #}
+        </div>
+    </div>
+</div>

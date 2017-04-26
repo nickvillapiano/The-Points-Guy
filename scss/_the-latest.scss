@@ -1,0 +1,11 @@
+// _the-latest.scss
+
+&.the-latest {
+
+    .link {
+
+        &:last-of-type {
+            border-bottom: 0.1rem solid $lightest-grey;
+        }
+    }
+}

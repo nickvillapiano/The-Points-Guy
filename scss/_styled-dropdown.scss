@@ -1,0 +1,71 @@
+// _styled-dropdown.scss
+
+.styled-dropdown {
+    font-size: 1.4rem;
+    color: $royal;
+    overflow: hidden;
+
+    .dropdown-trigger {
+        border: 0.1rem solid $border-grey;
+        border-radius: 0;
+        display: inline-block;
+        -webkit-appearance: initial;
+        -moz-appearance: initial;
+        padding: 0.7rem 4rem 0.7rem 1.5rem;
+        min-width: 18rem;
+        float: left;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 0.7rem;
+            height: 0.7rem;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%) rotate(45deg);
+            border-right: 0.2rem solid $royal;
+            border-bottom: 0.2rem solid $royal;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .dropdown-contents {
+        clear: both;
+        border: 0.1rem solid $border-grey;
+        border-top: none;
+        min-width: 19.6rem;
+        float: left;
+        display: none;
+
+        .line-item {
+            padding: 0.7rem 4rem 0.7rem 1.5rem;
+            min-width: 18rem;
+            transition: all 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                background: $green;
+                color: $black;
+            }
+        }
+    }
+
+    &.open {
+
+        .dropdown-trigger {
+
+            &:after {
+                transform: translateY(-50%) rotate(-135deg);
+            }
+        }
+
+        .dropdown-contents {
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<!-- Home Hero -->
+
+<section class="home-hero">
+    <video autoplay loop>
+        <source src="videos/sunset.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <img src="images/trans-overlay.png" alt="overlay layer">
+    </div>
+    <div class="home-hero-wrapper">
+        <div class="spotlight-article home-hero-element">
+            {% include 'components/article-header-home.twig'%}
+        </div>
+
+        {% include 'components/widgets/the-latest-home.twig' with
+            {
+                class: "inset right home-hero-element"
+            }
+        %}
+    </div>
+
+</section>

@@ -1,0 +1,86 @@
+// _typography.scss
+
+p {
+    margin: 0 0 2rem;
+}
+
+h1 {
+    position: relative;
+    font-size: 2rem;
+    line-height: 1;
+    @include walsh-bold;
+    text-transform: uppercase;
+    clear: both;
+    margin: 3.8rem 0 1.2rem;
+    width: 100%;
+    max-width: 6 * $colgut + $gut;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+blockquote {
+    text-align: center;
+    margin: 12.8rem auto 7.9rem auto;
+
+    .quote {
+        @include walsh-bold-oblique;
+        font-size: 3rem;
+        line-height: 1.2;
+        padding: 0 $col;
+        position: relative;
+
+        &:before {
+            content: "“";
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: center;
+            // left: 50%;
+            // transform: translateX(-50%);
+            @include pressura-regular;
+            font-size: 12.5rem;
+            color: $black;
+            line-height: 0;
+            margin: 0 0 2.8rem 0;
+
+        }
+    }
+
+    .attribution {
+        @include walsh-light;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 1.4rem;
+        margin: 1rem 0 0;
+
+        strong {
+            @include walsh-bold;
+        }
+    }
+}
+
+.bullet-list {
+
+    li {
+        margin: 0 0 2rem;
+    }
+}

@@ -1,0 +1,110 @@
+<!-- User Main Panel -->
+
+<section class="user-main-panel">
+
+    <div class="profile-section">
+        <div class="section-header alternate">
+            The Cards You Carry
+        </div>
+        {% include 'components/edit.twig' %}
+        <div class="description">
+            This lets other readers see whats in your wallet and helps us customize your newsletter
+        </div>
+        <div class="line-items">
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    class: 'card',
+                    img: '<img src="images/chase-sapphire-preferred.png" alt="Chase Sapphire Preferred FPO">',
+                    title: 'Chase Sapphire Preferred'
+                }
+            %}
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    class: 'card',
+                    img: '<img src="images/amex-skymiles-gold.png" alt="Chase Sapphire Preferred FPO">',
+                    title: 'American Express Skymiles Gold Card'
+                }
+            %}
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    class: 'card',
+                    img: '<img src="images/amex-platinum.png" alt="Chase Sapphire Preferred FPO">',
+                    title: 'American Express Platinum Card'
+                }
+            %}
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    class: 'card new',
+                    img: '+',
+                    title: 'Add New Card',
+                }
+            %}
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="section-header alternate">
+            Rewards Programs
+        </div>
+        {% include 'components/edit.twig' %}
+        <div class="description">
+            This lets us keep you posted about points valuations and recommend you relevant posts and guides
+        </div>
+        <div class="line-items">
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    img: '<img src="images/chase-logo.png" alt="Chase Sapphire Preferred FPO">',
+                    title: 'Chase Ultimate Rewards'
+                }
+            %}
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    img: '<img src="images/delta-logo.png" alt="Chase Sapphire Preferred FPO">',
+                    title: 'Delta Skymiles'
+                }
+            %}
+
+            {% include 'components/profile-section-line-item.twig' with
+                {
+                    class: 'new',
+                    img: '+',
+                    title: 'Add New Rewards Program'
+                }
+            %}
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="section-header alternate">
+            Recent Comments
+        </div>
+
+        <div class="line-items comments">
+            {% include 'components/profile-section-line-item-comment.twig' with
+                {
+                    timestamp: 'Yesterday',
+                    title: 'The 4 Best Credit Cards for Fall Travel',
+                    comment: 'I was able to get an additional 10,000 mile signing bonus by visiting the AmEx site in incognition mode in my browser. Worth a shot!',
+                    number: '4'
+                }
+            %}
+            {% include 'components/profile-section-line-item-comment.twig' with
+                {
+                    timestamp: 'Monday',
+                    title: 'Wow Air Just Doubled Its Carry-On Baggage Allowance',
+                    comment: "Hope this info helps, I'm way over the 5/24. I applied today in branch and got approved instantly with 30K limit. I have 3 Checking accounts with Chase (Over 10k in deposits) I don't know if this helps or not. Also have 5 Chase card with",
+                    number: '6',
+                    isTruncated: true
+                }
+            %}
+            {% include 'components/profile-section-line-item-comment.twig' with
+                {
+                    timestamp: 'Yesterday',
+                    title: 'The 4 Best Credit Cards for the Charlotte-Based Traveler',
+                    comment: 'I was able to get an additional 10,000 mile signing bonus by visiting the AmEx site in incognition mode in my browser. Worth a shot!',
+                    number: '4'
+                }
+            %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<svg version="1.1" id="envelope-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 83 60" enable-background="new 0 0 83 60" xml:space="preserve">
+	<style>
+		.cls-1 {
+			stroke: "#000000"; 
+			stroke-width: "4"; 
+			stroke-miterlimit: "10";
+		}
+	</style>
+	<path class="cls-1" d="M2,2v56h4h71h4V2H2z M74.3,6L41.5,38.8L8.7,6H74.3z M77,54H6V8.9
+	l35.5,35.5l0,0l0,0L77,8.9V54z"/>
+</svg>

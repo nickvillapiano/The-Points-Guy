@@ -1,0 +1,24 @@
+<!-- Profile Section Line Item: Comment -->
+
+<div class="line-item comment">
+    <div class="meta">
+        <div class="timestamp">
+            {{timestamp}}
+        </div>
+        <a href="#">{{title}}</a>
+    </div>
+    <div class="comment-body">
+        {{comment}}
+        {% if isTruncated %}
+            <div class="ellipse">
+                ...
+            </div>
+        {% else %}
+
+        {% endif %}
+    </div>
+    <div class="replies">
+        <a href="#">{{number}} Replies</a>
+    </div>
+
+</div>

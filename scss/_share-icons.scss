@@ -1,0 +1,104 @@
+// _share-icons.scss
+
+.share-icons {
+    display: inline-block;
+    @include walsh-light;
+    font-size: 3rem;
+    vertical-align: top;
+
+    .twitter-icon {
+        position: relative;
+        @include ss-social;
+        @include inline-vertical;
+        color: $white;
+    }
+
+    .facebook-icon {
+        @extend .twitter-icon;
+        margin: 0 2.8rem;
+    }
+
+    .comments-icon {
+        @extend .twitter-icon;
+        margin: 0;
+
+        svg {
+            width: 3.3rem;
+
+            .cls-1 {
+                fill: $white;
+            }
+        }
+    }
+
+    .counter {
+        position: absolute;
+        z-index: 2;
+        top: -1rem;
+        right: -2.5rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        background: $navy;
+        border-radius: 50%;
+        color: $white;
+        @include pressura-regular;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.5rem 0 0;
+        margin: 0 1.1rem 0 0.6rem;
+        transition: color 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        }
+    }
+
+    .icon {
+
+    }
+
+    .icon-label {
+        position: relative;
+        top: -0.7rem;
+        font-size: 2rem;
+        @include walsh-bold;
+        color: $black;
+    }
+
+    &.article-footer {
+        width: 100%;
+        padding: 3rem 0 2.6rem;
+        border-top: 0.1rem solid $border-grey;
+        border-bottom: 0.1rem solid $border-grey;
+        text-align: center;
+        margin: 5rem 0 -5rem;
+
+        .share-label {
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            color: $black;
+        }
+
+        .twitter-icon {
+            color: $twitter;
+            transition: opacity 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+
+        .facebook-icon {
+            color: $facebook;
+            margin: 0 1.7rem;
+        }
+
+        .link-icon {
+            @extend .comments-icon;
+            color: $black;
+        }
+    }
+}

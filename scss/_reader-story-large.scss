@@ -1,0 +1,357 @@
+// _reader-story-large.scss
+
+.reader-story-large {
+    margin: 5rem 0;
+
+    .reader-story-large-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $content-width;
+        margin: 0 auto;
+
+        .reader-story-large-header {
+            position: relative;
+            overflow: hidden;
+
+            .bg-image {
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: url(../images/reader-story-bg.jpg) center center no-repeat;
+                background-size: cover;
+                height: 100%;
+
+                blockquote {
+                    position: relative;
+                    z-index: 3;
+                    margin: 0 auto;
+                    color: $white;
+                    width: 80%;
+                    max-width: 66.5rem;
+                    padding: 10rem 0;
+
+                    .quote {
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: -25%;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, #1723c6 22%, transparent);
+                opacity: 0.8;
+            }
+
+            .flag {
+                background: $green;
+                transform: rotate(45deg);
+                position: absolute;
+                z-index: 2;
+                width: 13.6rem;
+                height: 13.6rem;
+                top: -6.8rem;
+                right: -6.8rem;
+            }
+
+            .refresh {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                z-index: 3;
+                color: $navy;
+                transition: all 0.2s;
+
+                span {
+                    @include walsh-bold;
+                    font-size: 1.4rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 0.5rem 0 0;
+                }
+
+                #refresh-icon {
+                    width: 2.6rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                    transition: all 0.2s, transform 0.5s;
+
+                    .cls-1 {
+                        fill: none;
+                        stroke: $navy;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                        transition: 0.2s;
+                    }
+
+                    .cls-2 {
+                        fill: $navy;
+                        transition: 0.2s;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $royal;
+
+                    #refresh-icon {
+                        transform: rotate(360deg);
+
+                        .cls-1 {
+                            stroke: $royal;
+                        }
+
+                        .cls-2 {
+                            fill: $royal;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reader-story-large-footer {
+            position: relative;
+            margin: -0.4rem 0 0;
+            border: 0.1rem solid $border-grey;
+            border-top: none;
+            padding: 2.5rem 3.5rem 2.5rem;
+
+            .deal-meta {
+
+                .depart {
+                    @include walsh-bold-oblique;
+                }
+
+                .location {
+                    @include walsh-bold;
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    margin: -0.1rem 0 -0.9rem 0;
+                }
+
+                .cost {
+                    font-size: 4.8rem;
+                    text-transform: uppercase;
+                    margin: 0 0 -1.3rem;
+                }
+
+                .more-link {
+                }
+            }
+
+            .person-meta {
+                position: absolute;
+                top: -6.3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                z-index: 4;
+
+                .person-image {
+                    width: 12.5rem;
+                    overflow: hidden;
+                    border-radius: 50%;
+
+                    img {
+                        display: block;
+                    }
+                }
+
+                .name {
+                    @include walsh-bold;
+                    text-transform: uppercase;
+                }
+
+                .role {
+                    @include walsh-light-oblique;
+                }
+            }
+
+            .card-meta {
+                position: absolute;
+                bottom: 2.5rem;
+                right: 3.5rem;
+
+                .used {
+                    @include walsh-light-oblique;
+                    font-size: 1.6rem;
+                    margin: 0 0 0.1rem 0;
+                }
+
+                .card-wrapper {
+
+                    .card-title {
+                        @include walsh-bold;
+                        font-size: 2rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                        line-height: 1.2;
+                        margin: 0 1.4rem 0 0;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $royal;
+                        }
+                    }
+
+                    .card-image {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 9.5rem;
+                        position: relative;
+
+                        img {
+                            margin: -0.15rem 0 0 0;
+                            display: block;
+                            position: relative;
+                            z-index: 2;
+                        }
+
+                        &:after {
+                            content: "";
+                            width: 7.5rem;
+                            height: 7.5rem;
+                            background: $lightest-grey;
+                            border-radius: 50%;
+                            display: block;
+                            @include absolute-center;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+
+    .reader-story-large {
+
+        .reader-story-large-wrapper {
+
+            .reader-story-large-footer {
+
+                .deal-meta {
+                    text-align: center;
+                    margin-top: 8rem;
+                }
+
+                .person-meta {
+                    top: -5rem;
+
+                    .person-image {
+                        width: 9.5rem;
+                        margin: 0 auto;
+                    }
+                }
+
+                .card-meta {
+                    position: relative;
+                    bottom: 0;
+                    right: 0;
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 880px) {
+
+    .reader-story-large {
+
+        blockquote {
+
+            .quote {
+                font-size: 2.8rem;
+            }
+        }
+
+        .reader-story-large-wrapper {
+
+            .reader-story-large-footer {
+
+                .deal-meta {
+                }
+
+                .person-meta {
+                    top: -4rem;
+
+                    .person-image {
+                        width: 8rem;
+                    }
+                }
+
+                .card-meta {
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .reader-story-large {
+
+        .reader-story-large-wrapper {
+
+            .reader-story-large-header {
+
+                .overlay {
+                    background-size: cover;
+                }
+
+                blockquote {
+                    padding: 7rem 0;
+                }
+            }
+
+            .reader-story-large-footer {
+
+                .deal-meta {
+
+                    .depart {
+                        font-size: 1.6rem;
+                    }
+
+                    .location {
+                        font-size: 2.6rem;
+                    }
+
+                    .cost {
+                        font-size: 4rem;
+                    }
+                }
+
+                .person-meta {
+                    top: -3.5rem;
+
+                    .person-image {
+                        width: 7rem;
+                    }
+
+                    .name {
+                        font-size: 1.6rem;
+                    }
+
+                    .role {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .card-meta {
+                }
+            }
+        }
+    }
+}

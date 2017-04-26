@@ -1,0 +1,27 @@
+// _four-oh-four.scss
+
+.four-oh-four {
+
+    .home-ctas {
+        z-index: 2;
+    }
+
+    .content {
+        position: relative;
+        min-height: 75rem;
+    }
+
+    .guide {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+
+    .four-oh-four {
+
+        .content {
+            min-height: 100vh;
+        }
+    }
+}

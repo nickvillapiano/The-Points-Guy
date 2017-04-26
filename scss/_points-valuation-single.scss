@@ -1,0 +1,70 @@
+// _points-valuation-single.scss
+
+.points-valuation-single {
+
+    .points-valuation-single-wrapper {
+        max-width: 35rem;
+        margin: 0 auto;
+    }
+
+    .points-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.2rem 0 3.8rem;
+
+        .points-title {
+            @include walsh-bold;
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+
+        .points-value {
+            @include walsh-light;
+            font-size: 4.8rem;
+            color: $navy;
+
+            .carat {
+                width: 0rem;
+                height: 0rem;
+                display: inline-block;
+                vertical-align: middle;
+
+                &.up {
+                    border-left: 1.3rem solid transparent;
+                    border-right: 1.3rem solid transparent;
+                    border-bottom: 2rem solid $navy;
+                    transform: rotate(0deg);
+                }
+            }
+
+            .value {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .footer-meta {
+        display: flex;
+        padding: 0 0;
+
+        .method {
+            font-size: 1.6rem;
+            padding: 0 2rem 0 0;
+            border-right: 0.1rem solid $light-grey;
+
+            a, a:hover, a:active, a:visited, a:link {
+                color: $light-grey;
+            }
+
+            a:hover {
+                color: $black;
+            }
+        }
+
+        .more-link {
+            margin: 0.1rem 0 0 2rem;
+        }
+    }
+}

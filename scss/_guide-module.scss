@@ -1,0 +1,73 @@
+// _deals-module.scss
+
+.guide-module {
+    margin: 5rem 0 0;
+
+    .guide-module-wrapper {
+        width: 100%;
+        max-width: 12 * $colgut + 2 * $gut;
+        margin: 0 auto 5rem;
+        padding: 0 $gut;
+        text-align: center;
+    }
+
+    .article {
+        width: calc(33.333% - 1.666rem);
+        @include inline-vertical;
+        margin: 0 2rem 0 0;
+        text-align: center;
+
+        &:nth-of-type(3) {
+            margin: 0;
+        }
+
+        a, a:hover, a:active, a:visited, a:link {
+            color: $black;
+            @include walsh-bold;
+            font-size: 1.8rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        a:hover {
+            color: $royal;
+        }
+    }
+
+    .timestamp {
+        border: none;
+        @include walsh-light-oblique;
+        font-size: 1.4rem;
+        color: $navy;
+        background: $green;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .guide-module-image {
+        width: 100%;
+        margin: -2.6rem 0 0 0;
+    }
+
+    .more-link {
+        margin: 5rem 0 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .guide-module {
+
+        .guide-module-wrapper {
+            max-width: 50rem;
+            width: calc(100% - 4rem);
+        }
+
+        .article {
+            width: 100%;
+            margin: 0 0 2rem;
+        }
+    }
+}

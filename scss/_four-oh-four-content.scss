@@ -1,0 +1,80 @@
+// _four-oh-four-content.scss
+
+.four-oh-four-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    .images {
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        min-width: 55rem;
+
+        div {
+
+            img {
+
+            }
+
+            &.image1 {
+                margin: 0 0 -3rem -4rem;
+            }
+
+            &.image2 {
+
+            }
+
+            &.image3 {
+                margin: -3.6rem 0 0 -3.2rem;
+                //
+                animation-name: pendulum;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                transform-origin: 50% 0%;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes pendulum {
+                0% {
+                    transform: rotate(-15deg);
+                }
+                50% {
+                    transform: rotate(10deg);
+                }
+                100% {
+                    transform: rotate(-15deg);
+                }
+            }
+        }
+
+        .images-macro {
+            animation-duration: 1s;
+        }
+    }
+
+    .copy {
+        text-align: center;
+        @include absolute-center;
+        width: calc(100% - 4rem);
+
+        .headline {
+            font-size: calc(4rem + 1vw); // Slightly responsive type
+            line-height: 1;
+            margin: 0 0 5rem;
+            @include walsh-bold;
+        }
+
+        .sub-headline {
+            width: calc(100% - 4rem);
+            margin: 0 auto;
+            max-width: 50rem;
+        }
+    }
+}
+

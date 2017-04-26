@@ -1,0 +1,23 @@
+// _further-viewing.scss
+
+&.further-viewing {
+
+    svg {
+        width: 2rem;
+        @include inline-vertical;
+
+        .st0 {
+            stroke: $black;
+            stroke-width: 0.6567;
+            stroke-miterlimit: 10;
+        }
+
+        .st1 {
+
+        }
+    }
+
+    a, a:hover, a:active, a:visited, a:link {
+        vertical-align: middle;
+    }
+}

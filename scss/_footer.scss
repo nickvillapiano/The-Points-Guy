@@ -1,0 +1,555 @@
+// Footer
+
+// Notch mix-in. Argument specifies facing direction, as labeled.
+@mixin notch($direction: right, $top-bottom: top, $before-after: before) {
+    position: relative;
+
+    &:#{$before-after} {
+        content: "";
+        position: absolute;
+        #{if($direction=="right", "right", "left")}: 0;
+        #{if($direction=="right", "left", "right")}: inherit;
+        #{$top-bottom}: 0;
+        border: 0;
+        border-#{if($direction=="right", "left", "right")}: 10px solid transparent;
+        border-#{$top-bottom}: 1rem solid $map-blue;
+    }
+}
+
+.old-footer {
+    text-align: center;
+    background: $light-grey;
+    width: 100vw;
+    padding: 10rem;
+    float: left;
+}
+
+// AR: using class vs tag for tag-reuse
+.Footer {
+    background: $lightest-grey;
+}
+
+/* ---=== Main map footer el ===--- */
+.FooterMap {
+    background: $map-blue;
+    background-size: cover;
+    width: 100%;
+}
+
+/* ---=== Actual Footer ===--- */
+.FooterMain {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #fcfcfc;
+    border-top: 0.2rem solid $lightest-grey;
+
+    // stack the two main columns at this breakpoint
+    @media only screen and (max-width: 840px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
+    .wrapper {
+        display: flex;
+        max-width: 1330px;
+        position: relative;
+    }
+
+    .row {
+        margin-bottom: 22px;
+
+        .row__header {
+            /* THE TPG NEWSLETTER: */
+            @include pressura-light;
+            font-size: 12px;
+            color: $lightest-grey;
+            letter-spacing: -0.35px;
+            border-bottom: 1px dashed $lightest-grey;
+            word-spacing: 0;
+            padding-bottom: 6px;
+        }
+    }
+
+/* ---=== Left side Main Column ===--- */
+
+    .column__main {
+        display: flex;
+        border-style: dashed;
+        border-color: $lightest-grey;
+        border-width: 0 1px 0 0;
+        padding: 20px 40px 20px 20px;
+
+        @media only screen and (max-width: 840px) {
+            border-width: 0 0 1px 0;
+        }
+
+        @media only screen and (max-width: 660px) {
+            flex-direction: column;
+        }
+    }
+
+    .column__main_logo {
+        flex-grow: 1;
+        text-align: right;
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+        min-width: 99px;
+        .vert {
+            display: block;
+        }
+        .horiz {
+            display: none;
+        }
+        @media only screen and (max-width: 660px) {
+            text-align: left;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            .vert {
+                display: none;
+            }
+            .horiz {
+                display: block;
+            }
+        }
+    }
+
+    // newsletter
+    .newsletter__wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-top: 14px;
+
+        @media only screen and (max-width: 1100px) {
+            flex-wrap: wrap;
+        }
+
+        .copy {
+            max-width: 310px;
+            margin-right: 20px;
+            @include walsh-light;
+            font-size: 16px;
+            color: $light-grey;
+            @media only screen and (max-width: 1100px) {
+                max-width: initial;
+                margin-bottom: 20px;
+            }
+
+            b {
+                color: #202026;
+                @include walsh-bold;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-grow: 1;
+            @media only screen and (max-width: 660px) {
+                flex-direction: column;
+            }
+
+        }
+
+        input {
+            height: 40px;
+            display: block;
+            flex-grow: 2;
+            &::-webkit-input-placeholder  {
+                @include walsh-medium-oblique;
+                font-size: 18px;
+                color: #9B9B9B;
+                letter-spacing: -0.57px;
+            }
+        }
+
+        button {
+            background: $navy;
+            border: 0;
+            color: $white;
+            @include walsh-bold;
+            font-size: 14px;
+            letter-spacing: -0.44px;
+            text-decoration: underline;
+            height: 40px;
+            margin-left: 18px;
+            flex-grow: 3;
+            min-width: 160px;
+            transition: all .3s;
+            &:hover {
+                background: $royal;
+            }
+
+            @media only screen and (max-width: 660px) {
+                margin: 18px 0 0 0;
+            }
+
+        }
+    }
+
+    // general links row
+    .link_row {
+        a {
+            @include walsh-bold;
+            font-size: 14px;
+            color: #0F1568;
+            text-transform: uppercase;
+            border-right: 1px dashed $lightest-grey;
+            text-decoration: none;
+            display: inline-block;
+            padding: 3px 18px 3px 0;
+            margin: 10px 18px 0 0;
+            transition: color .3s;
+
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                border: 0;
+            }
+
+            &:hover {
+                color: $royal;
+            }
+        }
+    }
+
+    // site tools row
+    .site_tools {
+        display: flex;
+        @media only screen and (max-width: 1100px) {
+            flex-wrap: wrap;
+        }
+
+        .row__header {
+            width: 310px;
+            @media only screen and (max-width: 660px) {
+                width: auto;
+            }
+        }
+
+        .disclosure__wrapper {
+            @include walsh-bold;
+            font-size: 14px;
+            line-height: 1;
+            flex-grow: 1;
+            text-align: center;
+            margin-top: 25px;
+            @media only screen and (max-width: 1100px) {
+                text-align: left;
+            }
+
+            a {
+                color: $navy;
+                text-decoration: none;
+                border: 2px solid $navy;
+                padding: 11px 65px;
+                display: inline-block;
+                &:hover {
+                    color: $white;
+                    background: $navy;
+                }
+            }
+        }
+    }
+
+    // yatta yatta yatta
+    .yatta {
+        @include pressura-light;
+        font-size: 12px;
+        color: $lightest-grey;
+        letter-spacing: -0.35px;
+        word-spacing: 0;
+        &.desktop {
+            display: block;
+        }
+        &.mobile {
+            display: none;
+            max-width: 80%;
+            // margin-left: 20px;
+        }
+        @media only screen and (max-width: 840px) {
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
+        }
+
+        .copy {
+            margin-right: 40px;
+        }
+        a {
+            color: $lightest-grey;
+            transition: color .3s;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+/* ---=== Right Side Social Column ===--- */
+    .column__social {
+        padding: 20px 36px;
+
+        @media only screen and (max-width: 840px) {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .row__header {
+            margin-bottom: 6px;
+        }
+    }
+
+    .footer_social {
+        width: 200px;
+        @media only screen and (max-width: 840px) {
+            width: auto;
+        }
+
+        i.icon {
+            margin-right: 10px;
+            width: 25px;
+            text-align: center;
+            display: inline-block;
+            @media only screen and (max-width: 840px) {
+                margin: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            margin: 18px 0;
+            color: $navy;
+            &, svg path{
+                transition: all .3s;
+            }
+
+            @media only screen and (max-width: 840px) {
+                display: inline-block;
+                margin: 0 10px 0 0;
+                vertical-align: middle
+            }
+
+            &:hover {
+                color: $royal;
+                svg path {
+                    fill: $royal;
+                }
+            }
+        }
+        .plain-link {
+            font-size: 16px;
+            display: inline-block;
+            margin: 4px 0 12px;
+            @media only screen and (max-width: 840px) {
+                margin-right: 20px;
+            }
+
+        }
+    }
+
+    .social_text {
+        @include walsh-bold;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: top;
+        @media only screen and (max-width: 840px) {
+            display: none;
+        }
+
+    }
+
+
+    @keyframes disco {
+        25% { fill: #f0f; }
+        50% { fill: #ff0; transform: scale(0.95) rotate(-2deg);}
+        75% { fill: #0ff; }
+    }
+
+    .arf {
+        position: absolute;
+        bottom: 20px;
+        right: 24px;
+        svg path {
+            transform-origin: bottom center;
+        }
+        &:hover svg path {
+            animation: .6s ease-in-out disco infinite;
+        }
+    }
+
+}
+
+/* ---=== DISPLAY MODE: Footer slide in ===--- */
+
+.footer-slide-in {
+    position: relative;
+
+    // will need to add this to every el above footer?
+    .above-footer {
+        position: relative;
+        z-index: 1;
+        &.white {
+            background: $white;
+        }
+    }
+
+    .Footer {
+        width: 100%;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FooterMap {
+        height: 0;
+    }
+
+    // Nix the notches until we're in 'active' mode
+    .FooterMain:before,
+    .FooterMain .column__main:before,
+    .FooterMain .column__social:before {
+        display: none;
+    }
+
+    &.footer-active {
+        padding-bottom: 100vh;
+
+        .above-footer {
+            box-shadow: 0 0 20px rgba(0,0,0,.3);
+        }
+
+        .Footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .FooterMap  {
+            flex-grow: 1;
+            height: auto;
+        }
+
+        .FooterMain {
+            bottom: 0;
+            width: 100%;
+        }
+
+        .FooterMain:before,
+        .FooterMain .column__main:before,
+        .FooterMain .column__social:before {
+            display: block;
+        }
+    }
+
+}
+
+/* ---=== DISPLAY MODE: Map under, fixed  ===--- */
+
+.footer-reveal {
+    // AR: padding adds 'lip' for max scroll. Adjust based on height of FooterMapHeader
+    padding-bottom: calc(100vh - 140px);
+
+    .above-footer {
+        position: relative;
+        z-index: 1;
+        &.white {
+            background: $white;
+        }
+    }
+
+    .Footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FooterMain {
+        z-index: 1;
+    }
+
+    .FooterMapHeader {
+        @include walsh-bold;
+        font-size: 36px;
+        color: #FFFFFF;
+        letter-spacing: -1.13px;
+        z-index: 1;
+        padding: 28px 20px 0;
+        text-align: center;
+    }
+
+    .FooterMap {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+
+    .FooterMain {
+        @include notch(left, top);
+        @include notch(left, bottom, after);
+        &:before {
+            border-top-color: $lightest-grey;
+        }
+
+        .wrapper {
+            @media only screen and (max-width: 840px) {
+                @include notch(left, bottom);
+            }
+        }
+    }
+
+    .FooterMain .column__main {
+        @include notch;
+        @include notch(right, bottom, after);
+        &:before {
+            border-top-color: $lightest-grey;
+        }
+        @media only screen and (min-width: 840px) {
+            &:after {
+                border-top-color: $lightest-grey;
+            }
+        }
+    }
+
+    .FooterMain .column__social .row {
+        @media only screen and (max-width: 840px) {
+            @include notch(right, top);
+            @include notch(right, bottom, after);
+            position: initial;
+            &:before {
+                top: -1px;
+            }
+        }
+    }
+
+    .FooterMain .column__social {
+        @include notch(left, top);
+        @include notch(left, bottom, after);
+
+        &:before {
+            left: -1px;
+            @media only screen and (min-width: 840px) {
+                border-top-color: $lightest-grey;
+            }
+            @media only screen and (max-width: 840px) {
+                left: 0;
+                top: -1px;
+            }
+        }
+        &:after {
+            left: -1px;
+        }
+    }
+}

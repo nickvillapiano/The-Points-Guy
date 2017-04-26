@@ -1,0 +1,108 @@
+// _latest-updates.scss
+
+.latest-updates {
+    padding: 5rem 0;
+
+    .latest-updates-wrapper {
+        width: calc(100% - 4rem);
+        max-width: 9 * $colgut - $gut;
+        margin: 0 auto;
+    }
+
+    .social-blocks {
+        text-align: center;
+    }
+
+    .social-block {
+        position: relative;
+        display: inline-block;
+        margin: 0 1rem 2rem 0;
+
+        .meta {
+            text-align: center;
+            position: relative;
+            width: 25rem;
+            height: 25rem;
+            overflow: hidden;
+            transition: all 0.3s;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .overlay {
+                background: linear-gradient(0deg, #202026, transparent);
+                width: 100%;
+                height: 50%;
+                opacity: 0.7;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            .meta-micro {
+                @include absolute-center;
+                z-index: 3;
+            }
+
+            svg {
+                display: block;
+                width: 7rem;
+                margin: 0 auto;
+
+                .cls-1 {
+                    fill: $white;
+                }
+            }
+
+            a, a:hover, a:visited, a:active, a:link {
+                @include walsh-bold;
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: $green;
+                display: block;
+                margin: 2.4rem 0 0;
+            }
+        }
+
+        .button {
+            margin: 2rem auto 0;
+            padding: 1.2rem 0;
+            width: 17rem;
+            text-align: center;
+            background: $black;
+            color: $white;
+
+            svg {
+                width: 2rem;
+                display: inline-block;
+                vertical-align: middle;
+
+                .cls-1 {
+                    fill: $white;
+                }
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0 0 1rem;
+            }
+        }
+
+        .followers {
+            @include walsh-light-oblique;
+            font-size: 1.6rem;
+            margin: 1.1rem 0 0 0;
+        }
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+

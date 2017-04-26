@@ -1,0 +1,55 @@
+<!-- Widget - Our Favorite Cards -->
+
+<div class="widget our-favorite-cards {{class}}">
+    <div class="title">
+        Our<br>Favorite Cards
+    </div>
+    <div class="timestamp">
+        Updated June 15th, 2016
+    </div>
+    <div class="link">
+            {% include 'components/favorite-individual-card.twig' with
+                {
+                    imgUrl: '<img src="images/chase-card.png" alt="Chase Card FPO">',
+                    cardTitle: 'Ultimate Rewards',
+                    offer: '50k + 5k Points'
+                }
+            %}
+        </div>
+        <div class="link">
+            {% include 'components/favorite-individual-card.twig' with
+                {
+                    imgUrl: '<img src="images/hilton-hhonors.png" alt="Hilton Card FPO">',
+                    cardTitle: 'Hilton HHonors',
+                    offer: '60k + 5k Points'
+                }
+            %}
+        </div>
+        <div class="link">
+            {% include 'components/favorite-individual-card.twig' with
+                {
+                    imgUrl: '<img src="images/aadvantage.png" alt="Aadvantage Card FPO">',
+                    cardTitle: 'Ultimate Rewards',
+                    offer: '60k Points'
+                }
+            %}
+        </div>
+        <div class="link">
+            {% include 'components/favorite-individual-card.twig' with
+                {
+                    imgUrl: '<img src="images/jetblue-card.png" alt="JetBlue Card FPO">',
+                    cardTitle: 'IHG Rewards',
+                    offer: '70k Points'
+                }
+            %}
+        </div>
+        <div class="link">
+            {% include 'components/favorite-individual-card.twig' with
+                {
+                    imgUrl: '<img src="images/amex-platinum.png" alt="Amex Platinum FPO">',
+                    cardTitle: 'Rapid Rewards',
+                    offer: '50k Points'
+                }
+            %}
+        </div>
+</div>

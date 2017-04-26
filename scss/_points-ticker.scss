@@ -1,0 +1,340 @@
+// _points-valuation-horizontal.scss
+
+.points-ticker {
+    background: $black;
+    color: $white;
+    padding: 24px 20px;
+
+    a {
+        color: $white;
+    }
+
+    .points-ticker-wrapper {
+        width: 100%;
+        max-width: 1330px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include max-w(980px) {
+            flex-direction: column;
+            position: relative;
+        }
+    }
+
+    .header {
+        max-width: 150px;
+        @include max-w(980px) {
+            max-width: none;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            @include pressura-bold;
+            font-size: 16px;
+            line-height: 19px;
+            @include max-w(980px) {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+        }
+        .sub-title {
+            @include walsh-light-oblique;
+            font-size: 13px;
+            line-height: 14px;
+            @include max-w(980px) {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .ticker-nav {
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        @include max-w(980px) {
+            position: absolute;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+            background: $white;
+            transform: translateY(-50%);
+            transition: all 0.2s;
+
+            // AR: perfect css border arrows, yay NV
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0.9rem;
+                height: 0.9rem;
+                border-left: 0.2rem solid $black;
+                border-bottom: 0.2rem solid $black;
+                transition: border-color 0.3s;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: $green;
+
+                &:after {
+                    border-color: $navy;
+                }
+            }
+        }
+
+
+        &.prev {
+            left: -4rem;
+            i:before {
+                transform: translate3d(-50%, -50%, 0) rotate(45deg);
+                margin-left: 2px;
+            }
+            @include max-w(980px) {
+                left: -45px;
+            }
+        }
+
+
+        &.next {
+            right: -4rem;
+            i:before {
+                transform: translate3d(-50%, -50%, 0) rotate(-135deg);
+                margin-left: -2px;
+            }
+            @include max-w(980px) {
+                right: -45px;
+            }
+        }
+    }
+
+    .ticker-item-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        max-width: 995px;
+        position: relative;
+        margin: 0 40px;
+        @include max-w(980px) {
+            flex-wrap: wrap;
+            max-width: calc(100% - 80px);
+            justify-content: center;
+        }
+
+        @include max-w(640px) {
+            flex-direction: column;
+        }
+    }
+
+
+    .ticker-item {
+        padding: 8px 18px;
+        border-left: 1px solid $light-grey;
+        opacity: 0;
+        transition: all .3s;
+        display: none;
+        &:nth-child(4n), &:last-child {
+            border-right: 1px solid $light-grey;
+        }
+
+        @include max-w(980px) {
+            padding: 18px;
+            width: calc(50% - 20px);
+            margin: 0 10px;
+            &, &:nth-child(4n), &:last-child {
+                border: 0;
+                border-bottom: 1px solid $light-grey;
+            }
+        }
+
+        @include max-w(640px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        // AR: pre-show; invisible but block'd for transition w/out jump
+        &.toShow {
+            display: block;
+        }
+
+        // AR: Show it
+        &.show {
+            opacity: 1;
+        }
+
+        // AR: Fade out but still block'd. NOTE: JS req's transition.
+        &.out {
+            opacity: 0;
+        }
+
+        .meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .meta-title {
+            @include walsh-bold;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .meta-description {
+            @include walsh-light;
+            font-size: 24px;
+            line-height: 1;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        .number-animate {
+            display: inline-block;
+            min-width: 32px;
+        }
+
+        &.value-up {
+
+            .meta {
+                color: $white;
+
+                .meta-description {
+                    position: relative;
+                    margin-left: 36px;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: -2.4rem;
+                        transform: translateY(-50%);
+                        width: 0rem;
+                        height: 0rem;
+                        border-left: 1rem solid transparent;
+                        border-right: 1rem solid transparent;
+                        border-bottom: 1.2rem solid $white;
+                    }
+
+                    @keyframes upArrow {
+
+                        0% {
+                            transform: translateY(-50%);
+                        }
+
+                        50% {
+                            transform: translateY(-50%) translateY(-0.5rem);
+                        }
+
+                        100% {
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+
+                .meta {
+
+                    .meta-description {
+
+                        &:before {
+                            animation: upArrow 1s infinite;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.value-down {
+
+            .meta {
+                color: $red;
+
+                .meta-description {
+                    position: relative;
+                    margin-left: 36px;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: -2.4rem;
+                        transform: translateY(-50%);
+                        width: 0rem;
+                        height: 0rem;
+                        border-left: 1rem solid transparent;
+                        border-right: 1rem solid transparent;
+                        border-top: 1.2rem solid $red;
+                    }
+
+                    @keyframes downArrow {
+
+                        0% {
+                            transform: translateY(-50%);
+                        }
+
+                        50% {
+                            transform: translateY(-50%) translateY(0.5rem);
+                        }
+
+                        100% {
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+
+            .meta {
+                color: $white;
+
+                .meta-description {
+
+                    &:before {
+                        animation: downArrow 1s infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    .see-all {
+        @include walsh-light;
+        font-size: 14px;
+        line-height: 18px;
+        position: relative;
+        text-align: right;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -1.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-right: 0.1rem solid $white;
+            border-bottom: 0.1rem solid $white;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        @include max-w(980px) {
+            margin: 30px 0 0 0;
+        }
+    }
+
+}

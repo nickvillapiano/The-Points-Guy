@@ -1,0 +1,52 @@
+<!-- Account Panel -->
+
+<section class="account-panel">
+    <div class="section-header alternate">
+        Account
+    </div>
+
+    {% include "components/carat.twig" %}
+
+    <div class="profile-section">
+        <div class="user-name" contenteditable="true">
+            marie.carter@gmail.com
+        </div>
+        {% include 'components/edit.twig' %}
+        <div class="change-password">
+            <a href="#">Change Password</a>
+        </div>
+    </div>
+
+
+    <div class="profile-section">
+        <div class="section-header alternate">
+            Newsletters
+        </div>
+        {% include "components/carat.twig" %}
+        <div class="newsletter-controls">
+            {% include 'components/newsletter-control.twig' with
+                {
+                    class: 'enabled',
+                    label: 'Daily'
+                }
+            %}
+            {% include 'components/newsletter-control.twig' with
+                {
+                    label: 'Weekly'
+                }
+            %}
+            {% include 'components/newsletter-control.twig' with
+                {
+                    label: 'Deal Alerts'
+                }
+            %}
+            {% include 'components/newsletter-control.twig' with
+                {
+                    class: 'enabled',
+                    label: 'Your cards & points',
+                    subLabel: '(monthly digest)'
+                }
+            %}
+        </div>
+    </div>
+</section>

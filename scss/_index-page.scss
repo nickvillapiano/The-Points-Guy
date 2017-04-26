@@ -1,0 +1,47 @@
+.index-macro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background: $navy;
+
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    // flex-direction: column;
+
+    section {
+      min-width: 200px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      // justify-content: center;
+      flex-direction: column;
+
+      a, a:hover, a:active, a:visited, a:link {
+        @include walsh-bold;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px 0;
+
+        &.flat {
+          @include walsh-light;
+          text-transform: none;
+        }
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+// Article content
+
+.article-content {
+    width: calc(100% - 30.5rem);
+    padding: 0 5.5rem 0 0;
+    margin: 0.5rem 0 0 0;
+    color: $black;
+    line-height: 1.875;
+    float: left;
+    transition: margin 0.3s;
+
+
+    .article-wrapper {
+        width: 100%;
+
+        .article-body-content {
+            float: left;
+            width: 100%;
+
+            .intro {
+            }
+
+            p {
+
+                &:nth-of-type(1) {
+
+                    &:first-letter {
+                        @include pressura-regular;
+                        font-size: 10rem;
+                        color: $navy;
+                        line-height: 0.5;
+                        float: left;
+                        padding-right: 0.5rem;
+                        margin: 1.8rem 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.title {
+    @include walsh-bold;
+    font-size: 4.8rem;
+    line-height: 1;
+    margin: 0 0 0.2rem 0;
+    width: 100%;
+    max-width: 80rem;
+}
+
+.timestamp {
+    @include walsh-light;
+    font-size: 1.6rem;
+    color: $light-grey;
+    vertical-align: middle;
+    padding: 0.4rem 2rem;
+    border-left: 0.1rem solid $lightest-grey;
+    border-right: 0.1rem solid $lightest-grey;
+    margin: 0 0 0 2rem;
+    display: inline-block;
+}
+
+.comments-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 0 0 1rem;
+    padding: 0 0 0 1rem;
+
+    strong {
+        @include walsh-bold;
+    }
+}
+
+.byline {
+
+}
+
+@import "card-pick";
+
+@import "javascript";
+
+@import "related-links";
+
+

@@ -1,0 +1,25 @@
+<!-- Notification bar -->
+
+<section class="notification-bar">
+    <div class="notification-bar-wrapper">
+        {% if isSignUp %}
+            <span class="notification">
+                Keep track of your cards! <a href="#">Create a TPG account</a> so you can comment, customize your newsletter, and more.
+            </span>
+        {% else %}
+            <img src="images/alert-plane.png" alt="Notification Icon FPO">
+            <span class="notification">
+                FLIGHT DEAL: US to the Philipines from $469 Round-Trip!
+            </span>
+            <span class="notification-timestamp">
+                22 seconds ago
+            </span>
+        {% endif %}
+    </div>
+    <div class="x-close">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"/>
+            <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"/>
+        </svg>
+    </div>
+</section>

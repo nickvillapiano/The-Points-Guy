@@ -1,0 +1,229 @@
+// _user-main-panel.scss
+
+.user-main-panel {
+    width: 100%;
+    margin: 0 0 0 $gut;
+
+    .line-items {
+
+        &.comments {
+            display: block;
+            margin: 2rem 0 0;
+        }
+
+        &.engaged {
+
+            .line-item {
+
+                .toggle-x {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .line-item {
+            width: 2 * $colgut - $gut;
+            display: inline-block;
+            vertical-align: top;
+            margin: 1.6rem 1.6rem 0 0;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+
+                .title {
+                    color: $royal;
+                }
+            }
+
+            .toggle-x {
+                position: absolute;
+                width: 3rem;
+                height: 3rem;
+                top: -1rem;
+                right: -1rem;
+                z-index: 10;
+                background: $green;
+                padding: 1rem;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 0.2s;
+
+                svg {
+                    @include absolute-center;
+                }
+            }
+
+            .photo-macro {
+                background: $grey9;
+                height: $colgut;
+                position: relative;
+                padding: 3rem;
+
+                .photo-micro {
+                    @include absolute-center;
+                }
+            }
+
+            .title {
+                font-size: 1.4rem;
+                line-height: 1.285;
+                text-align: center;
+                margin: 0.5rem 0 0;
+                padding: 0 1rem;
+                transition: color 0.2s;
+            }
+
+            &.card {
+
+                .photo-macro {
+
+                    .photo-micro {
+
+                        img {
+                            position: relative;
+                            z-index: 2;
+                            margin: 0.45rem 0 0 0;
+                        }
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 6.5rem;
+                            height: 6.5rem;
+                            background: $lightest-grey;
+                            border-radius: 50%;
+                            @include absolute-center;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+
+            &.new {
+
+                .toggle-x {
+                    opacity: 0;
+                }
+
+                .photo-macro {
+                    color: $navy;
+                    font-size: 3rem;
+                    @include walsh-bold;
+
+                    .photo-micro {
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 6.5rem;
+                            height: 6.5rem;
+                            background: $green;
+                            border-radius: 50%;
+                            @include absolute-center;
+                            z-index: -1;
+                        }
+                    }
+                }
+
+                .title {
+                    text-decoration: underline;
+                }
+            }
+
+            &.comment {
+                width: 100%;
+                margin: -2rem 0 4rem;
+                padding: 0 0 2rem 0;
+                border-bottom: 0.1rem solid $border-grey;
+
+                .meta {
+
+                    .timestamp {
+                        margin-left: 0;
+                        padding-left: 0;
+                        border-left: 0;
+                        padding-right: 1.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    a, a:hover, a:active, a:visited, a:link {
+                        font-size: 1.6rem;
+                        @include inline-vertical;
+                        color: $black;
+                    }
+                }
+
+                .comment-body {
+                    @include walsh-bold;
+                    font-size: 2rem;
+                    margin: 1rem 0 1.5rem 0;
+                }
+
+                .ellipse {
+                    text-decoration: underline;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .replies {
+
+                    a, a:hover, a:active, a:visited, a:link {
+
+                    }
+                }
+
+                &:last-of-type {
+                    border: none;
+                    margin-bottom: 0;
+                    padding-bottom: 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 730px) {
+
+    .user-main-panel {
+        width: 100%;
+        margin: 0;
+        padding: 0 2rem;
+
+        .line-items {
+            margin: 4rem 0 0;
+
+            .line-item {
+                width: 100%;
+                margin: 0 0 3.7rem;
+
+                .photo-macro {
+                    padding: 0;
+                    width: 7rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: auto;
+                    background: none;
+
+                    .photo-micro {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        transform: none;
+                        text-align: center;
+                    }
+                }
+
+                .title {
+                    text-align: left;
+                    width: calc(100% - 8rem);
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}

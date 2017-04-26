@@ -1,0 +1,164 @@
+// _author-stats.scss
+
+.author-stats {
+    background: $black;
+
+    .author-stats-wrapper {
+        width: calc(100% - 4rem);
+        max-width: $article-width;
+        margin: 0 auto;
+
+        .meta {
+            display: inline-block;
+            vertical-align: middle;
+
+            .title {
+                border: none;
+                color: $white;
+                font-size: 1.9rem;
+                margin: 0 3.5rem 0 0;
+                padding: 1.1rem 0 1.1rem 1rem;
+                border-left: 0.4rem solid $white;
+            }
+        }
+
+        .stat {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 1.5rem 3rem;
+            margin: 2.5rem 0;
+            border-left: 0.1rem solid $border-grey;
+
+            .title {
+                @include walsh-bold;
+                color: $light-grey;
+                text-transform: none;
+                font-size: 1.4rem;
+                border: none;
+                @include inline-vertical;
+                margin: 0 1rem 0 0;
+                padding: 0;
+                line-height: 1;
+                word-spacing: normal;
+            }
+
+            .data {
+                color: $white;
+                @include inline-vertical;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                font-size: 2.4rem;
+            }
+
+            &:last-of-type {
+                border-right: 0.1rem solid $border-grey;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .author-stats {
+
+        .author-stats-wrapper {
+
+            .stat {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .author-stats {
+
+        .author-stats-wrapper {
+            text-align: center;
+
+            .meta {
+                width: 100%;
+
+                & + .stat {
+                    border-left: none;
+                    padding-left: 0;
+                }
+
+                .title {
+                    margin: 0;
+                    padding: 1.1rem 0;
+                    border-bottom: 0.4rem solid $green;
+                    border-left: 0;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .stat {
+
+                &:last-of-type {
+                    border-right: none;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    .author-stats {
+
+        .author-stats-wrapper {
+
+            .meta {
+
+                .title {
+                }
+            }
+
+            .stat {
+                width: calc(50% - 1rem);
+
+                &:nth-of-type(even) {
+                    border-left: 0;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .author-stats {
+
+        .author-stats-wrapper {
+            padding: 4rem 0;
+
+            .meta {
+
+                .title {
+                    margin: 0 0 3rem;
+                }
+            }
+
+            .stat {
+                width: 100%;
+                border: none;
+                border-bottom: 0.1rem solid $border-grey;
+                margin: 2rem 0 0;
+                padding: 0 0 2rem;
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+// _widget.scss
+
+.widget {
+    margin: 0 0 5rem;
+
+    .title {
+        @include pressura-bold;
+        font-size: 2.4rem;
+        line-height: 0.9;
+        color: $navy;
+        position: relative;
+        border: 1rem solid $navy;
+        border-left: none;
+        display: inline-block;
+        width: auto;
+        padding: 0.8rem 0.5rem 0.4rem 0;
+        margin: -0.9rem 0 1rem;
+
+        & + .link {
+
+            img {
+                margin: 0;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.alternate {
+            border: none;
+            background: $black;
+            color: $white;
+            margin: 0;
+            @include pressura-regular;
+            font-size: 1.6rem;
+            text-align: center;
+            width: 100%;
+            padding: 0.5rem 0;
+            margin: 0;
+        }
+    }
+
+    .link {
+        @include walsh-bold;
+        font-size: 1.8rem;
+        line-height: 1.333;
+        border-bottom: 0.1rem solid $lightest-grey;
+        margin: 0 0 0.6rem;
+        padding: 0 0 0.6rem;
+
+        a, a:hover, a:active, a:visited, a:link {
+            text-decoration: none;
+            color: $black;
+            transition: color 0.3s;
+
+            &.comment-link {
+                @include walsh-light;
+                color: $royal;
+                display: block;
+                font-size: 1.4rem;
+                text-decoration: underline;
+                margin: 0.2rem 0 0 0;
+
+                &:before {
+                    content: "";
+                    background: url('../images/icons/comment-icon-navy.png') center center no-repeat;
+                    display: block;
+                    width: 1.6rem;
+                    height: 1.4rem;
+                    display: inline-block;
+                    background-size: cover;
+                    margin: 0 0.1rem -0.2rem;
+                }
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        a:hover {
+            color: $royal;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+
+        img {
+            margin: 1rem 0 0;
+            width: 100%;
+
+            & + a {
+                display: inline-block;
+            }
+        }
+
+        .meta {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 0.5rem;
+
+            .meta-title {
+                font-size: 1.6rem;
+            }
+
+            .meta-description {
+                @include walsh-light;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .timestamp {
+        margin: 0 0 1rem;
+        padding: 0;
+        border: none;
+        font-size: 1.4rem;
+        color: $navy;
+        position: relative;
+        top: -0.4rem;
+        display: block;
+
+        & + .link {
+
+            img {
+                margin: 0;
+            }
+        }
+    }
+
+    .all-newest-posts {
+        font-size: 1.6rem;
+
+        &:after {
+            content: "";
+            width: 0.9rem;
+            height: 0.9rem;
+            border-right: 0.2rem solid $royal;
+            border-bottom: 0.2rem solid $royal;
+            transform: rotate(-45deg);
+            display: inline-block;
+            margin: 0 0 0.1rem -0.2rem;
+        }
+    }
+
+    &.inset {
+        width: calc(3 * #{$colgut} - #{$gut});
+        text-align: left;
+        margin-top: $gut;
+
+        blockquote {
+            margin: 4rem 0 0;
+
+            .quote {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    &.full {
+
+    }
+
+    &.left {
+        float: left;
+        margin-right: calc(#{$colgut});
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -4.5rem;
+            width: 0.1rem;
+            height: 100%;
+            background: url(../images/dashes-vert-light.png) top center repeat-y;
+        }
+    }
+
+    &.right {
+        float: right;
+        margin-left: calc(#{$colgut});
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -4.5rem;
+            width: 0.1rem;
+            height: 100%;
+            background: url(../images/dashes-vert.png) top center repeat-y;
+        }
+    }
+
+    &.third {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.333% - 6.333rem);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @import "our-favorite-cards";
+
+    @import "our-approach";
+
+    @import "widget-guide-cta";
+
+    @import "the-latest";
+
+    @import "how-far-can-you-fly";
+
+    @import "which-airline-should-you-fly";
+
+    @import "whats-possible-with-points";
+
+    @import "vertical-ad";
+
+    @import "the-latest-home";
+
+    @import "points-valuation-horizontal";
+
+    @import "featured-comment";
+
+    @import "further-viewing";
+}
+
+@media only screen and (max-width: 1210px) {
+
+    .widget {
+
+        &.inset {
+            margin: 4rem auto 2rem;
+            width: 34rem;
+
+            &:before {
+                display: none;
+            }
+
+            &.left {
+                float: none;
+            }
+
+            &.right {
+                float: none;
+            }
+        }
+    }
+}

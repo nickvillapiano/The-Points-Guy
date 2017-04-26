@@ -1,0 +1,37 @@
+<!-- Home Content -->
+
+{% include 'components/home-hero.twig' %}
+
+{% include 'components/widgets/our-favorite-cards-horizontal.twig' with
+    {
+        class: "dark"
+    }
+ %}
+
+{% include 'components/extended-reading.twig' %}
+
+{% include 'components/widgets/points-valuation-horizontal.twig' %}
+
+{% include 'components/three-articles-module.twig' with
+    {
+        class: "essential-reading",
+        title: "Essential Reading",
+
+    }
+%}
+
+{# {% include 'components/interactive-card-module.twig' %} #}
+{% include 'components/interactive-card-module-sk.twig' %}
+
+{# {% include 'components/horizontal-articles.twig' %} #}
+
+{# {% include 'components/deals-module.twig' %} #}
+
+{% include 'components/tpgtv-block.twig' %}
+
+{% include 'components/reader-story-large.twig' %}
+
+{% include 'components/horizontal-articles-viral.twig' %}
+
+{% include 'components/insta-module.twig' %}
+

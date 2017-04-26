@@ -1,0 +1,11 @@
+<svg id="location-pin-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.76 87.02">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #231f20;
+            }
+        </style>
+    </defs>
+    <title>Location Pin Icon</title>
+    <path class="cls-1" d="M63.76,32.09A31.88,31.88,0,1,0,15.82,59.41L31.51,87,47.57,59.62A31.86,31.86,0,0,0,63.76,32.09ZM31.94,22.15a9.73,9.73,0,1,1-9.8,9.67A9.73,9.73,0,0,1,31.94,22.15Z"/>
+</svg>

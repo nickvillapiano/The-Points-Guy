@@ -1,0 +1,56 @@
+// _single-deal-module.scss
+
+.single-deal-module {
+    position: relative;
+    vertical-align: top;
+
+    .widget {
+        margin: 0;
+    }
+
+    .article {
+        position: relative;
+        margin: 0 0 2rem;
+
+        a, a:hover, a:active, a:visited, a:link {
+            @include walsh-bold;
+            text-decoration: none;
+            color: $black;
+        }
+
+        a:hover {
+            color: $royal;
+        }
+    }
+
+    .image-wrapper {
+        position: relative;
+    }
+
+    .title {
+        font-size: 2.4rem;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .timestamp {
+        border: none;
+        @include walsh-bold;
+        font-size: 1.6rem;
+        color: $navy;
+        background: $green;
+        margin: 0;
+        position: absolute;
+        z-index: 2;
+        padding: 0.4rem 2rem;
+        text-align: center;
+        top: initial;
+        bottom: 0.5rem;
+        right: 0;
+        text-transform: uppercase;
+        padding: 1.2rem 2.2rem;
+
+        &:before {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
+body {
+    @include walsh-light;
+    font-size: 1.8rem;
+    background: $white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fade {
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    opacity: 0;
+    transform: translateY( 3px );
+
+    &.in {
+        transform: translateY( 0 );
+        opacity: 1;
+    }
+}
+
+.content {
+    // max-width: 15 * $colgut + $gut;
+    // max-width: 124.5rem;
+    max-width: 115rem;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: $white;
+}
+
+a, a:hover, a:active, a:visited, a:link {
+    color: $royal;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: $black;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+::selection {
+    color: $navy;
+    background: $green;
+}
+
+input {
+    display: inline-block;
+    border: 0.1rem solid $lightest-grey;
+    color: $black;
+    font-size: 2rem;
+    padding: 0.7rem 0.7rem;
+}
+
+@mixin placeholder {
+    color: $lightest-grey;
+}
+
+::-webkit-input-placeholder {
+    @include placeholder;
+}
+
+::-moz-placeholder {
+    @include placeholder;
+}
+
+:-ms-input-placeholder {
+    @include placeholder;
+}
+
+:-moz-placeholder {
+    @include placeholder;
+}
+
+$max-width: 137rem;
+$sidebar-width: 3 * $colgut - $gut; // old equation: 3 * $colgut - $gut + 5.5rem
+
+@mixin truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

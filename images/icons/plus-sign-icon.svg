@@ -1,0 +1,11 @@
+<svg id="plus-sign" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #202026;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="4" width="3" height="11"/>
+  <rect id="Rectangle_69_copy" data-name="Rectangle 69 copy" class="cls-1" y="4" width="11" height="3"/>
+</svg>

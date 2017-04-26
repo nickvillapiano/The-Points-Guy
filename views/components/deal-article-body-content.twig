@@ -1,0 +1,27 @@
+<!-- Deal article body content -->
+
+<div class="article-body-content">
+
+    {% include 'components/editorial-disclosure.twig' %}
+
+    <p>
+        We are seeing very low prices on Star Alliance Airlines from New York to Stockholm (ARN). Prices this low are typically reserved for low-cost carriers like Norwegian, but United, Lufthansa, Swiss, SAS and Air Canada are all combining to offer prices as low as $348 round-trip. There are also discounted fares to Oslo (OSL), but not as low as those to ARN. This cost includes seat reservations, one checked bag, meals and valuable frequent flyer miles as well. All flights require at least one connection, but this could still be a better deal than Norwegian’s nonstops, even if the prices are comparable on several dates. We found availability from October through December, including during Thanksgiving.
+    </p>
+
+    <!-- Article block -->
+
+    {% include 'components/deal-module.twig' %}
+
+    {% include "components/javascript.twig" %}
+
+    {% include 'components/share-icons.twig' with
+        {
+            class: 'article-footer',
+            isArticleFooter: true
+        }
+    %}
+
+    {% include "components/comments.twig" %}
+</div>
+
+

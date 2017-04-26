@@ -1,0 +1,54 @@
+<!-- Add a Card -->
+
+<section class="add-a-card">
+    <div class="add-a-card-wrapper">
+        <div class="x-close">
+            <svg version="1.1" id="x-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+                <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+                <rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+            </svg>
+        </div>
+        {% include 'components/section-header.twig' with
+            {
+                title: "Add a Card"
+            }
+        %}
+        <div class="add-a-card-content">
+
+            <div class="input-macro">
+                <div class="input-label">
+                    Card Name
+                </div>
+                {% include 'components/standard-input.twig' with
+                    {
+                        placeholder: "Type to Find Your Card"
+                    }
+                %}
+                <div class="input-results">
+                    <div class="line-item">
+                        Chase <em>Sapphire</em> Preferred
+                    </div>
+                    <div class="line-item">
+                        Chase <em>Sapphire</em> Reserve
+                    </div>
+                </div>
+                <div class="selected-result">
+                    <div class="card-wrapper">
+                        <img src="images/chase-sapphire-preferred.png">
+                    </div>
+                    <div class="card-title">
+                        Chase Sapphire Preferred
+                    </div>
+                </div>
+            </div>
+
+            <div class="button apply inactive">
+                Save this card
+            </div>
+            <div class="button cancel">
+                Cancel
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,230 @@
+// _how-far-can-you-fly.scss
+
+&.how-far-can-you-fly {
+    text-align: center;
+    border: 0.1rem solid $lightest-grey;
+    padding: 0 1.5rem 2.5rem;
+
+    .title {
+        width: calc(100% + 3rem);
+        margin: 0 0 0 -1.5rem;
+    }
+
+    .meta {
+
+        .intro {
+            @include walsh-bold;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            margin: 2.6rem 0 1.9rem;
+        }
+
+        .card {
+            position: relative;
+
+            img {
+                width: 8.6rem;
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before {
+                content: "";
+                width: 7.5rem;
+                height: 7.5rem;
+                background: $lightest-grey;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%) translateY(-0.4rem);
+                z-index: 1;
+            }
+        }
+    }
+
+    .equation {
+        margin: 0.6rem 0 0;
+
+        span {
+            @include walsh-light;
+            font-size: 3.2rem;
+        }
+
+        small {
+            display: block;
+            @include walsh-bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin: -0.3rem 0 0;
+        }
+
+        input {
+            width: 11rem;
+            font-size: 2rem;
+            margin: 0 0 0.7rem;
+            padding: 0.7rem 0.7rem;
+        }
+
+        .base-miles {
+        }
+
+        .plus {
+            margin: 0.1rem 0 -0.3rem 0;
+        }
+
+        .additional-miles {
+        }
+
+        .yields {
+            margin: 0.6rem 0;
+
+            img {
+                width: 1rem;
+            }
+        }
+    }
+
+    .slideshow {
+        position: relative;
+        height: 13.5rem;
+        margin: 0 0 1.4rem 0;
+
+        .images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 13.5rem;
+            overflow: hidden;
+
+            img {
+
+            }
+        }
+
+        .overlay {
+            @include absolute-center;
+            @include walsh-bold;
+            color: $white;
+            line-height: 1;
+
+            .from {
+                font-size: 1.4rem;
+            }
+
+            .destination {
+                font-size: 3.6rem;
+            }
+
+            .amount {
+                @include walsh-light;
+                font-size: 1.4rem;
+            }
+        }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 100%;
+
+            .arrow {
+                width: 2.4rem;
+                height: 2.4rem;
+                background: $navy;
+                border-radius: 50%;
+                @include absolute-center;
+
+                .lt-gt {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    border-left: 0.1rem solid $white;
+                    border-bottom: 0.1rem solid $white;
+                    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                    margin: 0 0 0 0.1rem;
+                    transition: border-color 0.3s;
+                }
+
+                &.left-arrow {
+                    left: 0;
+                }
+
+                &.right-arrow {
+                    left: 100%;
+                    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .lt-gt {
+                        border-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .apply {
+        width: 100%;
+    }
+
+    .powered-by {
+        font-size: 1.4rem;
+        margin: 1.1rem 0 0.3rem 0;
+
+        img {
+            width: 7.9rem;
+        }
+    }
+
+    .terms {
+        font-size: 1.4rem;
+    }
+
+    &.on-homepage {
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1210px) {
+
+    &.how-far-can-you-fly {
+
+        &.on-homepage {
+
+            &.inset {
+                padding-left: 1.5rem;
+                max-width: 25rem;
+
+                &.right {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+
+    &.how-far-can-you-fly {
+
+        &.on-homepage {
+
+            &.inset {
+
+                &.right {
+                    float: none;
+                    clear: both;
+                }
+            }
+        }
+    }
+}

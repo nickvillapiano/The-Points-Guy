@@ -1,0 +1,48 @@
+<!-- Cards Grid - Tag -->
+
+<section class="cards-grid-tag">
+    <div class="cards-grid-tag-wrapper">
+        <div class="section-header">
+            The Five Cards <br>
+            I'm Using Right Now
+        </div>
+        <div class="cards-grid">
+            {% include 'components/individual-card.twig' with
+                {
+                    imageUrl: '<img src="images/cards/01.png" alt="Chase Sapphire Card FPO">',
+                    title: 'Chase Sapphire Preferred'
+                }
+            %}
+            {% include 'components/individual-card.twig' with
+                {
+                    imageUrl: '<img src="images/cards/02.png" alt="Amex Platinum Card FPO">',
+                    title: 'American Express Platinum'
+                }
+            %}
+            {% include 'components/individual-card.twig' with
+                {
+                    imageUrl: '<img src="images/cards/03.png" alt="Princess Cruises Rewards Visa Card FPO">',
+                    title: 'Princess Cruises Rewards Visa Card'
+                }
+            %}
+            {% include 'components/individual-card.twig' with
+                {
+                    imageUrl: '<img src="images/cards/04.png" alt="Citi® / AAdvantage® Platinum Select® MasterCard® FPO">',
+                    title: 'Citi® / AAdvantage® Platinum Select® MasterCard®'
+                }
+            %}
+            {% include 'components/individual-card.twig' with
+                {
+                    imageUrl: '<img src="images/cards/05.png" alt="Sony® Card from Capital One® FPO">',
+                    title: 'Sony® Card from Capital One®'
+                }
+            %}
+        </div>
+        {% include 'components/more-link.twig' with
+            {
+                linkTarget: "#",
+                linkText: "See the complete guide"
+            }
+        %}
+    </div>
+</section>

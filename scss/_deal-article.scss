@@ -1,0 +1,77 @@
+// _deal-article.scss
+
+.deal-article {
+
+    .article-header {
+        position: relative;
+        margin-bottom: 8rem;
+        padding: 9.8rem 0;
+    }
+
+    .timestamp {
+        border-left: 0;
+        padding: 0.4rem 0;
+        margin-left: 1.8rem;
+    }
+
+    .deal-timestamp {
+        width: 100%;
+        text-align: center;
+        background: $green;
+        position: absolute;
+        left: 0;
+        bottom: -5rem;
+        height: 5rem;
+
+        .timestamp-macro {
+            display: inline-block;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            @include walsh-bold;
+            font-size: 1.6rem;
+            color: $navy;
+
+            .timestamp-micro {
+                padding: 0 1rem;
+                background: $green;
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: calc(100% + 16rem);
+                height: 0.1rem;
+                background: $navy;
+                top: 50%;
+                left: -7rem;
+                transform: translateY(-50%) translateY(-0.1rem);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: calc(100% + 16rem);
+                height: 0.1rem;
+                background: $navy;
+                top: 50%;
+                left: -7rem;
+                transform: translateY(-50%) translateY(0.2rem);
+            }
+        }
+    }
+
+    p {
+
+        & + .deal-module {
+            margin: 9rem 0 0 0;
+        }
+    }
+}

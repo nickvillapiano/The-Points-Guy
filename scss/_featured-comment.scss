@@ -1,0 +1,68 @@
+// _featured-comment.scss
+
+&.featured-comment {
+    margin: 2rem 0;
+
+    .from {
+        text-align: center;
+        font-size: 1.8rem;
+        @include walsh-light-oblique;
+        margin: 3rem 0 1rem;
+    }
+
+    .article-title {
+        text-align: center;
+
+        a, a:hover, a:active, a:visited, a:link {
+            text-decoration: none;
+            font-size: 1.8rem;
+            @include walsh-bold;
+            color: $black;
+        }
+
+        a:hover {
+            color: $royal;
+        }
+    }
+
+    &:before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1210px) {
+
+    &.on-homepage {
+        padding-left: 4rem;
+
+        &.featured-comment {
+
+            &.inset {
+
+                &.right {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+
+    &.on-homepage {
+
+        &.featured-comment {
+
+            &.inset {
+                width: 100%;
+                padding: 0 5rem;
+                max-width: 80rem;
+
+                &.right {
+                    float: none;
+                    clear: both;
+                }
+            }
+        }
+    }
+}

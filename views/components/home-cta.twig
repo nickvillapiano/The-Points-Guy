@@ -1,0 +1,20 @@
+<!-- Home CTA -->
+
+<div id="{{id}}" class="home-cta" style="background: url({{imgPath}}) center center no-repeat; background-size: cover">
+    <div class="overlay">
+        &nbsp;
+    </div>
+    <div class="home-cta-title">
+        <div class="home-cta-title-macro">
+            {{title|raw}}
+        </div>
+        <div class="byline">
+            by <a href="#">{{authorName}}</a>
+        </div>
+    </div>
+    {% include 'components/share-icons.twig' with
+        {
+            isOnlyComments: true
+        }
+    %}
+</div>

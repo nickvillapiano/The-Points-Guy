@@ -1,0 +1,55 @@
+<!-- Favorite Cards Tag Module -->
+
+<section class="favorite-cards-tag-module">
+
+	<div class="favorite-cards-tag-module-wrapper">
+		<div class="section-header">
+			{% if isAbout %}
+				The Four Cards I'm Using Right Now
+			{% else %}
+				Our Favorite Cards <br>
+				for Family Travel
+			{% endif %}
+		</div>
+	    <div class="our-favorite-cards-horizontal-wrapper">
+	    	<div class="links-wrapper">
+		        <div class="link">
+		            {% include 'components/favorite-individual-card.twig' with
+		                {
+		                    imgUrl: '<img src="images/chase-card.png" alt="Chase Card FPO">',
+		                    cardTitle: 'Ultimate Rewards',
+		                    offer: '50k + 5k Points'
+		                }
+		            %}
+		        </div>
+		        <div class="link">
+		            {% include 'components/favorite-individual-card.twig' with
+		                {
+		                    imgUrl: '<img src="images/hilton-hhonors.png" alt="Hilton Card FPO">',
+		                    cardTitle: 'Hilton HHonors',
+		                    offer: '60k + 5k Points'
+		                }
+		            %}
+		        </div>
+		        <div class="link">
+		            {% include 'components/favorite-individual-card.twig' with
+		                {
+		                    imgUrl: '<img src="images/aadvantage.png" alt="Aadvantage Card FPO">',
+		                    cardTitle: 'Ultimate Rewards',
+		                    offer: '60k Points'
+		                }
+		            %}
+		        </div>
+		        <div class="link">
+		            {% include 'components/favorite-individual-card.twig' with
+		                {
+		                    imgUrl: '<img src="images/jetblue-card.png" alt="JetBlue Card FPO">',
+		                    cardTitle: 'IHG Rewards',
+		                    offer: '70k Points'
+		                }
+		            %}
+		        </div>
+	    	</div>
+	    </div>
+	</div>
+</section>

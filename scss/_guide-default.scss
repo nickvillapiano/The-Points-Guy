@@ -1,0 +1,26 @@
+// _guide-default.scss
+
+.guide-default {
+
+    .article-header {
+        background: url(../images/bg-guide-default.jpg) center bottom no-repeat;
+        background-size: cover;
+        padding-bottom: 16rem;
+    }
+
+    .content {
+        margin-top: -8rem;
+        padding-top: 5rem;
+    }
+
+    .editorial-disclosure {
+        position: relative;
+        z-index: 1;
+        margin: 0rem auto 11rem;
+        max-width: 97rem;
+    }
+
+    .guide-preamble {
+        margin: 7.1rem auto 5rem;
+    }
+}

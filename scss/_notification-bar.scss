@@ -1,0 +1,73 @@
+// _notification-bar.scss
+
+.notification-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $green;
+    height: 5rem;
+    color: $navy;
+    @include walsh-bold;
+    font-size: 1.6rem;
+    z-index: 1000;
+    text-align: center;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+
+    &.expand {
+        transform: translateY(0);
+    }
+
+    .notification-bar-wrapper {
+        width: 100%;
+        @include absolute-center;
+
+        img {
+            width: 9rem;
+            display: inline-block;
+            vertical-align: middle;
+            margin: -0.5rem 0 0;
+        }
+
+        .notification {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 1.7rem 0 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .notification-timestamp {
+            display: inline-block;
+            vertical-align: middle;
+            @include walsh-light;
+        }
+    }
+
+    .x-close {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+
+        svg {
+            width: 1.5rem;
+
+            .cls-1 {
+                fill: $navy;
+                transition: all 0.3s;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+
+                .cls-1 {
+                    fill: $royal;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<!-- Widget - Author Stats -->
+
+<div class="widget author-stats {{class}}">
+
+    <div class="author-stats-wrapper">
+        <div class="meta">
+            <div class="title">
+                {{sectionTitle|raw}}
+            </div>
+        </div>
+        {% include 'components/widgets/author-stat.twig' with
+            {
+                statTitle: "Location",
+                statData: "New York"
+            }
+        %}
+        {% include 'components/widgets/author-stat.twig' with
+            {
+                statTitle: "Window or Aisle",
+                statData: "Aisle"
+            }
+        %}        
+        {% include 'components/widgets/author-stat.twig' with
+            {
+                statTitle: "Mileage this year",
+                statData: "75,000"
+            }
+        %}
+        {% include 'components/widgets/author-stat.twig' with
+            {
+                statTitle: "Countries visited",
+                statData: "16"
+            }
+        %}
+    </div>
+</div>

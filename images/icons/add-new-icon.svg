@@ -1,0 +1,15 @@
+<svg id="add-new-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.05 80.05">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>Add New Icon</title>
+  <circle class="cls-1" cx="40.02" cy="40.02" r="38.52"/>
+  <line class="cls-1" x1="27.52" y1="40.02" x2="52.53" y2="40.02"/>
+  <line class="cls-1" x1="40.02" y1="27.52" x2="40.02" y2="52.53"/>
+</svg>
